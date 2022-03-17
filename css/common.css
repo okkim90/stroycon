@@ -1,0 +1,96 @@
+@import url(../css/font.css);
+.header { position: fixed; z-index: 9999; width: 100%; left: 0; top: 0; }
+
+.header_top { height: 60px; padding-top: 12px; position: relative; text-align: center; }
+
+.header_top .logo { display: inline-block; vertical-align: top; width: 68px; height: 45px; background-image: url(../images/LOGO_W.png); background-repeat: no-repeat; background-position: center center; background-size: cover; }
+
+.header_util { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 0; top: 0; }
+
+.header_util .btn_mypage { display: block; width: 40px; height: 50px; background: url(../images/ico_member.svg) no-repeat center center; background-size: cover; }
+
+.header_util .btn_lm { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 40px; height: 50px; position: relative; }
+
+.header_util .btn_lm .bar_box { width: 16px; height: 17px; position: relative; }
+
+.header_util .btn_lm .bar_box .bar { position: absolute; width: 100%; height: 1px; background-color: #fff; left: 0%; }
+
+.header_util .btn_lm .bar_box .bar.top { top: 0; }
+
+.header_util .btn_lm .bar_box .bar.mid { top: 8px; }
+
+.header_util .btn_lm .bar_box .bar.bot { width: 60%; top: 16px; }
+
+.header .nav_area { position: relative; height: 40px; }
+
+.header .nav_area .nav { position: absolute; width: 100%; height: 40px; text-align: center; }
+
+.header .nav_area .nav_list li { display: inline-block; vertical-align: top; }
+
+.header .nav_area .nav_list li a { display: block; font-size: 16px; font-weight: bold; line-height: 40px; color: #fff; padding: 0 20px; }
+
+.mv { position: absolute; width: 100%; height: 100%; left: 0; top: 0; }
+
+.mv_wrap { position: relative; padding-top: 100%; }
+
+.mv_item { height: 100%; }
+
+.mv_item1 { background-color: aqua; }
+
+.mv_item2 { background-color: blueviolet; }
+
+.mv_item3 { background-color: chocolate; }
+
+.sub_inner { position: relative; max-width: 740px; margin: 0 auto; }
+
+.footer { background-color: #f5f5f5; padding: 20px 16px; text-align: center; }
+
+.footer_menu { font-size: 0; margin-bottom: 12px; }
+
+.footer_menu li { display: inline-block; vertical-align: top; padding: 0 10px; position: relative; }
+
+.footer_menu li::after { content: ''; position: absolute; width: 1px; height: 10px; background-color: #ccc; right: 0; top: 50%; margin-top: -5px; }
+
+.footer_menu li:last-child::after { display: none; }
+
+.footer_menu a { display: block; font-size: 11px; line-height: 1.82; letter-spacing: -0.55px; }
+
+.footer .footer_policy { -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 500px; margin: 0 auto; background-color: #fff; text-align: left; border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.footer .footer_policy_tit button { display: block; width: 100%; line-height: 30px; padding: 0 12px; position: relative; font-size: 12px; font-weight: bold; text-align: left; }
+
+.footer .footer_policy_tit button i { position: absolute; width: 12px; height: 7px; background-image: url(../images/ico/ico_open.svg); background-repeat: no-repeat; background-position: center center; right: 12px; top: 50%; margin-top: -3.5px; }
+
+.footer_policy.on .footer .footer_policy { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+
+.footer .footer_policy .txt_box { display: none; border-top: 1px solid rgba(0, 0, 0, 0.1); padding: 9px 11px; font-size: 10px; color: #666; line-height: 1.6; letter-spacing: -0.3px; }
+
+.footer .copy { font-size: 11px; line-height: 13px; font-weight: 500; margin-top: 12px; }
+
+.sub_header { position: absolute; z-index: 9999; left: 0; top: 0; width: 100%; }
+
+.sub_header.ty_list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.sub_header .btn_back { width: 40px; height: 40px; background: url(../images/ico/arrow_r.svg) no-repeat center center; }
+
+.sub_header .btn_setting { width: 40px; height: 40px; background: url(../images/ico/ico_setting.svg) no-repeat center center; }
+
+.sub_header .util { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.sub_header .util .btn { display: inline-block; vertical-align: top; width: 40px; height: 40px; background-repeat: no-repeat; background-position: center center; }
+
+.sub_header .util .btn_like { background-image: url(../images/ico/btn_heart.svg); }
+
+.sub_header .util .btn_subscribe { background-image: url(../images/ico/btn_star.svg); }
+
+.sub_header.ty_view { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 40px; height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.5); }
+
+.sub_header.ty_view .tit_area { font-size: 16px; line-height: 40px; color: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.sub_header.ty_view .tit_area .tit { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-size: 16px; font-weight: normal; }
+
+.sub_header.ty_view .tit_area .count_box { display: inline-block; padding-left: 10px; white-space: nowrap; -ms-flex-negative: 0; flex-shrink: 0; }
+
+.sub_header.ty_view .btn_back { position: absolute; left: 0; top: 0; }
+
+.sub_header.ty_view .btn_setting { position: absolute; right: 0; top: 0; }

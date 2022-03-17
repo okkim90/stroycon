@@ -1,0 +1,299 @@
+@import url(../css/font.css);
+
+.header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+
+    left: 0;
+    top: 0;
+    &_top {
+        height: 60px;
+        padding-top: 12px;
+        position: relative;
+        text-align: center;
+        .logo {
+            display: inline-block;
+            vertical-align: top;
+            width: 68px;
+            height: 45px;
+            background-image: url(../images/LOGO_W.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+    &_util {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        .btn_mypage {
+            display: block;
+            width: 40px;
+            height: 50px;
+            background: url(../images/ico_member.svg) no-repeat center center;
+            background-size: cover;
+        }
+        .btn_lm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 50px;
+            position: relative;
+            .bar_box {
+                width: 16px;
+                height: 17px;
+                position: relative;
+                .bar {
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #fff;
+                    left: 0%;
+                    &.top {
+                        top: 0;
+                    }
+                    &.mid {
+                        top: 8px;
+                    }
+                    &.bot {
+                        width: 60%;
+                        top: 16px;
+                    }
+
+                }
+            }
+
+        }
+    }
+    .nav_area {
+        position: relative;
+        height: 40px;
+        .nav {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            &_list {
+                li {
+                    display: inline-block;
+                    vertical-align: top;
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 40px;
+                        color: #fff;
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mv {
+    &_wrap {
+        position: relative;
+        padding-top: 100%;
+    }
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    &_item {
+        height: 100%;
+        &1 {
+            background-color:aqua;
+        }
+        &2 {
+            background-color:blueviolet;
+        }
+        &3 {
+            background-color:chocolate;
+        }
+    }
+}
+
+.sub_inner {
+    position: relative;
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px 16px;
+    text-align: center;
+    &_menu {
+        font-size: 0;
+        margin-bottom: 12px;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 10px;
+            position: relative;
+            &::after {
+                content:'';
+                position: absolute;
+                width: 1px;
+                height: 10px;
+                background-color: #ccc;
+                right: 0;
+                top: 50%;
+                margin-top: -5px;
+            }
+            &:last-child::after {
+                display: none;
+            }
+        }
+        a {
+            display: block;
+            font-size: 11px;
+            line-height: 1.82;
+            letter-spacing: -0.55px;
+        }
+    }
+    .footer_policy {
+        box-sizing: border-box;
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        text-align: left;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        &_tit {
+            button {
+                display: block;
+                width: 100%;
+                line-height: 30px;
+                padding: 0 12px;
+                position: relative;
+                font-size: 12px;
+                font-weight: bold;
+                text-align: left;
+
+                i {
+                    position: absolute;
+                    width: 12px;
+                    height: 7px;
+                    background-image: url(../images/ico/ico_open.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    right: 12px;
+                    top: 50%;
+                    margin-top: -3.5px;
+                }
+            }
+        }
+
+
+        @at-root .footer_policy.on & {
+            transform: rotate(180deg);
+        }
+
+        .txt_box {
+            display: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 9px 11px;
+            font-size: 10px;
+            color: #666;
+            line-height: 1.6;
+            letter-spacing: -0.3px;
+        }
+    }
+    .copy {
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 500;
+        margin-top: 12px;
+    }
+
+}
+
+
+
+.sub_header {
+
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    &.ty_list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn_back {
+        width: 40px;
+        height: 40px;
+        background: url(../images/ico/arrow_r.svg) no-repeat center center;
+    }
+    .btn_setting {
+        width: 40px;
+        height: 40px;
+        background: url(../images/ico/ico_setting.svg) no-repeat center center;
+    }
+    .util {
+        display: flex;
+        .btn {
+            display: inline-block;
+            vertical-align: top;
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            &_like {
+                background-image: url(../images/ico/btn_heart.svg);
+            }
+            &_subscribe {
+                background-image: url(../images/ico/btn_star.svg);
+            }
+        }
+    }
+    &.ty_view {
+        box-sizing: border-box;
+        padding: 0 40px;
+        height: 40px;
+        text-align: center;
+        background-color: rgba(0,0,0,.5);
+        .tit_area {
+            font-size: 16px;
+            line-height: 40px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            .tit {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-size: 16px;
+                font-weight: normal;
+            }
+            .count_box {
+                display: inline-block;
+                padding-left: 10px;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+        }
+        .btn_back {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .btn_setting {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+
+}

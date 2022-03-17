@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>스토리콘</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/nov_view.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+<body>
+    <div id="wrap" class="sub">
+        <div id="container">
+            <div class="sub_inner">
+                <div class="sub_header ty_view">
+                    <h1 class="blind">용이 비를 내리는 나라 이십바이트임당</h1>
+                    <div class="tit_area">
+                        <h2 class="tit">12화. The Contract</h2>
+                        <span class="count_box">(<span class="current_box">0</span>/<span class="total_box"></span>)</span>
+                    </div>
+                    <a href="" class="btn_back"><span class="blind">이전</span></a>
+                    <button type="button" class="btn_setting"><span class="blind">설정</span></button>
+                </div>
+                <div id="nov_view" class="nov_view" data-long-press-delay="800">
+                    <div class="view_dim"></div>
+                    <!--
+                    <div class="chapter_box on">
+                        <span class="step nov_tit on">1화</span>
+                    </div>
+                    -->
+                    <div class="chapter_box on" style="background-image: url(./images/bg_sample.png);">
+
+                        <div class="chapter_box_inner">
+                            <!--bg 영역1-->
+                            <!--
+                                bg_area
+                                배경색 : data-bc="색상코드"
+                                배경이미지 : data-img="이미지경로"
+                            -->
+                            <div class="bg_area" data-img="./images/bg_sample.png" data-fc="#fff" >
+
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 테스트 텍스트 테스트 텍스트 </span>
+                                </span>
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 </span>
+                                </span>
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 테스트 텍스트 테스트 </span>
+                                </span>
+                                <span class="view_sec step ty_talk sub" data-id="p2">
+                                    <div class="script_box left">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">사람1</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트 테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk sub subordination" data-id="p2">
+                                    <div class="script_box left">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">사람1</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트 테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <!--// bg 영역1-->
+                            <!--bg 영역2-->
+                            <div class="bg_area"  data-img="./images/view_bg2.gif" data-fc="#fff">
+
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 테스트 텍스트 테스트 텍스트 </span>
+                                </span>
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 </span>
+                                </span>
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 테스트 텍스트 테스트 </span>
+                                </span>
+                                <span class="view_sec step ty_talk sub" data-id="p2">
+                                    <div class="script_box left">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">사람1</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트 테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk sub subordination" data-id="p2">
+                                    <div class="script_box left">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">사람1</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트 테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+
+                            </div>
+                            <!--// bg 영역2-->
+                            <!--bg 영역3-->
+                            <div class="bg_area"  data-img="./images/view_bg3.jpg" data-fc="#fff">
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 테스트 텍스트 테스트 텍스트 </span>
+                                </span>
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 </span>
+                                </span>
+                                <span class="view_sec step txt default">
+                                    <span class="cont_area">테스트 텍스트 테스트 텍스트 테스트 </span>
+                                </span>
+                                <span class="view_sec step ty_talk sub" data-id="p2">
+                                    <div class="script_box left">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">사람1</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트 테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk sub subordination" data-id="p2">
+                                    <div class="script_box left">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">사람1</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트 테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class="view_sec step ty_talk main subordination" data-id="p1">
+                                    <div class="script_box right">
+                                        <span class="thumb"></span>
+                                        <div class="txt_box">
+                                            <span class="name">주인공</span>
+                                            <div class="script_list">
+                                                <span class="script">
+                                                    <span class="cont_area">테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트테스트 텍스트</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+
+                            </div>
+                            <!--// bg 영역3-->
+                            <!-- 다음회차 & 리스트 이동-->
+                            <span class="view_sec step ty_end_btns">
+                                <button type="button" class="btn">다음회차 보기</button>
+                                <button type="button" class="btn">리스트 보기</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="view_bottom">
+                    <div class="progress_box">
+                        <div id="progress"></div>
+                    </div>
+                    <div class="view_ctrl">
+                        <div class="ctrl_txt">
+                            <strong class="ctrl_txt_tit">글자크기</strong>
+                            <div class="btns" data-text='{"size":12, "max":18, "min":10}' data-name='{"size":13, "max":19, "min":11}' >
+                                <button class="btn_sizing btn_up" onclick="textUp();"><span class="blind">글자 사이즈 up</span></button>
+                                <button class="btn_sizing btn_down" onclick="textDown();"><span class="blind">글자 사이즈 down</span></button>
+                                <script>
+                                    let btn_sizing = $('.ctrl_txt .btns');
+                                    let text_size = btn_sizing.data('text');
+                                    let name_size = btn_sizing.data('name');
+                                    function textUp(){
+                                        if(text_size.size < text_size.max){
+                                            text_size.size+=1;
+                                            $('.cont_area').css({'font-size':text_size.size });
+                                        }
+                                        if(name_size.size < name_size.max){
+                                            name_size.size+=1;
+                                            $('.script_box .name').css({'font-size':name_size.size });
+                                        }
+                                    }
+                                    function textDown(){
+                                        if(text_size.size > text_size.min){
+                                            text_size.size-=1;
+                                            $('.cont_area').css({'font-size':text_size.size });
+                                        }
+                                        if(name_size.size > name_size.min){
+                                            name_size.size-=1;
+                                            $('.script_box .name').css({'font-size':name_size.size });
+                                        }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        <div class="ctrl_speed">
+                            <label><input type="radio" name="speed" value="1" class="speed_chk" checked><span class="blind">1배속</span><span class="ctrl_speed_btn">X 1</span></label>
+                            <label><input type="radio" name="speed" value="1.5" class="speed_chk"><span class="blind">1.5배속</span><span class="ctrl_speed_btn">X 1.5</span></label>
+                            <label><input type="radio" name="speed" value="2" class="speed_chk"><span class="blind">2배속</span><span class="ctrl_speed_btn">X 2</span></label>
+                            <!--
+                            <button type="button" class="ctrl_speed_btn"><span class="blind">1배속</span>X 1</button>
+                            <button type="button" class="ctrl_speed_btn"><span class="blind">1.5배속</span>X 1.5</button>
+                            <button type="button" class="ctrl_speed_btn"><span class="blind">2배속</span>X 2</button>
+                            -->
+                        </div>
+                        <div class="ctrl_btns">
+                            <button type="button" class="btn_comment"></button>
+                            <button type="button" class="btn_prev"></button>
+                            <button type="button" class="btn_next"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+            <footer id="footer" class="footer">
+                <ul class="footer_menu">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">광고안내</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                </ul>
+                <div class="footer_policy">
+                    <h2 class="footer_policy_tit">
+                        <button type="button" class="btn_policy">㈜동아사이언스 키즈 플랫폼 <i></i></button>
+                    </h2>
+                    <div class="txt_box">
+                        개인정보관리책임자 : <span>김수희 (privacy@dongascience.com) |</span> <span>청소년보호책임자 : 조기견</span> <br><br>
+                        서울시 용산구 청파로 109, 7층 (04370) | 문의 : 02-6749-2000 ｜팩스 : 02-3148-0789  사업자등록번호 : 101-81-62201 (사업자정보확인) | 통신판매업신고번호 : 제2013-서울용산-01101호 | 온라인 결제를 위한 PG사의 구매안전서비스(가입사실 확인)
+                    </div>
+                </div>
+                <p class="copy">Copyright © Dongascience. All right reserved.</p>
+            </footer>
+        -->
+    </div>
+
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/long-press-event.min.js"></script>
+    <script>
+        $(function(){
+            $('.nov_view').on('click',function(){
+
+                if(intervId){
+                    stop_autoplay();
+                }else{
+                    step_next();
+                }
+
+            });
+        });
+
+
+        $(document).keydown(function(event) {
+            if (event.keyCode == '37') {
+                step_prev();
+            }
+            else if (event.keyCode == '39') {
+                step_next();
+            }
+        });
+
+
+        var el = document.getElementById('nov_view');
+
+            // listen for the long-press event
+            el.addEventListener('long-press', function(e) {
+
+            // stop the event from bubbling up
+
+            var $speed_ty;
+            if($('.speed_chk').is(':checked')){
+                var $speed_ty = $('.speed_chk:checked').val();
+                console.log($speed_ty);
+            }
+
+            autoplay($speed_ty);
+            $('.nov_view').focus();
+            $('.view_ctrl').trigger('click');
+
+
+
+        });
+
+        window.oncontextmenu = function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+        };
+
+        $('.speed_chk').on('change',function(){
+            //console.log('스피드 변경'+$(this).val());
+            if($('.speed_chk').is(':checked') && intervId){
+                stop_autoplay();
+                autoplay($(this).val());
+            }
+
+        });
+
+
+        function step_view(pos){
+            for(var i = 0; i <= pos; i++ ){
+                var $item =  $('.step').eq(i);
+                $item
+                .addClass('on')
+                .parents('.chapter_box')
+                .addClass('on')
+                .siblings()
+                .removeClass('on');
+                // if($('.step').eq($step).hasClass('ty_bg')){
+                //     var bg = $('.step').eq($step).data('img');
+                //     var fc = $('.step').eq($step).data('fc');
+                //     console.log(bg);
+                //     $('.step').eq($step).parents('.chapter_box').css({'background-image':'url('+ bg +')', 'color':fc});
+                // }
+                if($item.parents('.bg_area')){
+                    var $bgarea = $('.step').eq(i).parents('.bg_area');
+                    if($item.parents('.bg_area').data('img')){
+                        var bg = $bgarea.data('img');
+                        var fc = $bgarea.data('fc');
+                        $('.step').eq(i).parents('.chapter_box').css({'background-image':'url('+ bg +')', 'background-color':'transparent', 'color':fc});
+                    }
+
+                    if($item.parents('.bg_area').data('bc')){
+                        var bc = $bgarea.data('bc');
+                        var fc = $bgarea.data('fc');
+                        $('.step').eq(i).parents('.chapter_box').css({'background-color':bc,'background-image':'url("images/empty.png")', 'color':fc});
+                    }
+                }
+                $('.current_box').text(i);
+            }
+            for(var i = pos ; i <= $('.step').length; i++ ){
+                $('.step').eq(i).removeClass('on');
+            }
+            $('.chapter_box.on').scrollTop($('.chapter_box.on')[0].scrollHeight);
+        }
+
+
+        $('#progress').slider({
+            range : "min",
+            value: 0,
+            min: 0,
+            max: $('.step').length ,
+            slide: function( event, ui ) {
+                //console.log(ui.value);
+                console.log(ui.value);
+                step_view(ui.value);
+                console.log()
+            },
+        });
+
+        $('.total_box').text($('.step').length);
+        function step_prev(){
+            var current_val = $('#progress').slider('value');
+            if(current_val > 0){
+                $('#progress').slider('value',current_val);
+                step_view(current_val);
+                console.log(current_val);
+            }
+        }
+        function step_next(){
+            var current_val = $('#progress').slider('value');
+            if(current_val < $('.step').length){
+                $('#progress').slider('value',current_val + 1);
+                step_view(current_val + 1);
+                console.log(current_val + 1);
+
+            }else{
+                stop_autoplay();
+            }
+        }
+
+        let intervId;
+        let default_speed = 600;
+
+        function autoplay(speed){
+            if (!intervId) {
+                intervId = setInterval(step_next,default_speed*speed);
+                console.log('auto start');
+            }
+        }
+        console.log($('.step').length);
+        function stop_autoplay(){
+            clearInterval(intervId);
+            intervId = null;
+            console.log('auto finish')
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>스토리콘</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <div id="wrap" class="main">
+        <header id="header" class="header">
+            <div class="header_top">
+                <h1 class="logo">
+                    <a href=""><span class="blind">스토리콘</span></a>
+                </h1>
+                <div class="header_util">
+                    <a href="" class="btn_mypage"><span class="blind">마이페이지</span></a>
+                    <button type="button" class="btn_lm">
+                        <span class="blind">전체메뉴</span>
+                        <div class="bar_box">
+                            <span class="bar top"></span>
+                            <span class="bar mid"></span>
+                            <span class="bar bot"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="nav_area">
+                <nav id="nav" class="nav">
+                    <ul class="nav_list">
+                        <li><a href="">소설</a></li>
+                        <li><a href="">웹툰</a></li>
+                        <li><a href="">갤러리</a></li>
+                        <li><a href="">나의 작업실</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="container">
+            <section class="mv_wrap">
+                <div class="mv">
+                    <ul class="swiper-wrapper mv_list">
+                        <div class="swiper-slide mv_item mv_item1">
+
+                        </div>
+                        <div class="swiper-slide mv_item mv_item2">
+
+                        </div>
+                        <div class="swiper-slide mv_item mv_item3">
+
+                        </div>
+                    </ul>
+                    <div class="mv_pagination">
+
+                    </div>
+                </div>
+            </section>
+            <div class="sec_wrap">
+                <section class="main_sec main_popular">
+                    <div class="main_popular_tit">
+                        <h2>인기있는 <span class="blind">소설</span></h2>
+                        <ul>
+                            <li><button class="btn_cate">소설</button></li>
+                            <li><button class="btn_cate">웹툰</button></li>
+                            <li><button class="btn_cate">갤러리</button></li>
+                        </ul>
+                        <span class="date">2022.03.10 기준</span>
+                        <a href="" class="btn_more"><span>더 보기</span></a>
+                    </div>
+                </section>
+                <section class="main_sec main_recommend">
+                    <div class="main_recommend_tit">
+                        <h2><strong>뀨니닝님</strong>을 위한 <strong>추천</strong></h2>
+                    </div>
+                    <div class="main_recommend_inner">
+                        <section class="inner_sec">
+                            <div class="inner_sec_tit">
+                                <h3>소설</h3>
+                                <ul class="tab_list">
+                                    <li><button>#전체</button></li>
+                                    <li><button>#무협</button></li>
+                                    <li><button>#판타지</button></li>
+                                    <li><button>#퓨전</button></li>
+                                    <li><button>#게임</button></li>
+                                    <li><button>#SF</button></li>
+                                    <li><button>#학원</button></li>
+                                </ul>
+                            </div>
+                            ul.
+
+                        </section>
+                        <section class="inner_sec">
+                            <div class="inner_sec_tit">
+                                <h3>웹툰</h3>
+                                <ul class="tab_list">
+                                    <li><button>#전체</button></li>
+                                    <li><button>#무협</button></li>
+                                    <li><button>#판타지</button></li>
+                                    <li><button>#퓨전</button></li>
+                                    <li><button>#게임</button></li>
+                                    <li><button>#SF</button></li>
+                                    <li><button>#학원</button></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="inner_sec">
+                            <div class="inner_sec_tit">
+                                <h3>갤러리</h3>
+                                <ul class="tab_list">
+                                    <li><button>#전체</button></li>
+                                    <li><button>#무협</button></li>
+                                    <li><button>#판타지</button></li>
+                                    <li><button>#퓨전</button></li>
+                                    <li><button>#게임</button></li>
+                                    <li><button>#SF</button></li>
+                                    <li><button>#학원</button></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+            <section class="main_sec main_best">
+
+            </section>
+        </div>
+        <footer id="footer">
+            <ul class="footer_menu">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">광고안내</a></li>
+                <li><a href="">개인정보취급방침</a></li>
+            </ul>
+            <div class="footer_policy">
+
+            </div>
+            <p class="copy">Copyright © Dongascience. All right reserved.</p>
+        </footer>
+    </div>
+
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        var mv = new Swiper('.mv',{
+            speed:600,
+            loop:true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction:false
+            },
+            pagination: {
+                clickable:true,
+                el: '.mv_pagination'
+            }
+        });
+
+    </script>
+</body>
+</html>
