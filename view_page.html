@@ -32,6 +32,7 @@
                 </div>
                 <div id="nov_view" class="nov_view" data-long-press-delay="800">
                     <div class="view_dim"></div>
+                    <div class="touch_layer"></div>
                     <!--
                     <div class="chapter_box on">
                         <span class="step nov_tit on">1화</span>
@@ -447,9 +448,9 @@
             }
 
             autoplay($speed_ty);
-            $('.nov_view').focus();
-            $('.view_ctrl').trigger('click');
-
+            $('.touch_layer').focus();
+            //$('.view_ctrl').trigger('click');
+            //e.preventDefault();
 
 
         });
