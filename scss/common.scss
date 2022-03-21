@@ -258,6 +258,10 @@
         }
     }
     &.ty_view {
+        position: fixed;
+        max-width: 740px;
+        left: 50%;
+        transform: translateX(-50%);
         box-sizing: border-box;
         padding: 0 40px;
         height: 40px;

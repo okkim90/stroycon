@@ -83,7 +83,7 @@
 
 .sub_header .util .btn_subscribe { background-image: url(../images/ico/btn_star.svg); }
 
-.sub_header.ty_view { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 40px; height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.5); }
+.sub_header.ty_view { position: fixed; max-width: 740px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 40px; height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.5); }
 
 .sub_header.ty_view .tit_area { font-size: 16px; line-height: 40px; color: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
