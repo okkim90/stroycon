@@ -495,7 +495,12 @@
         function pos_change(e){
 
             var $target = $(e);
+
             $pos.insertBefore($target.parents('.view_sec'));
+            if($target.hasClass('bg_section')){
+                $pos.insertBefore($target);
+            }
+
             //$('#nov_write').scrollTop($('#write_pos').position().top);
 
 
@@ -557,14 +562,16 @@
                 bg_editing = false;
             }else{
                 $pos.before(
-                    '<div class="bg_section">'+
-                        '<p class="p_url"><b>BG URL</b> : <span class="src_box">'+$src+'</span></p>'+
-                        '<div class="bg_section_bot">'+
-                            '<strong>배경전환 설정됨</strong>'+
-                            '<button type="button" class="btn_ctrl_bg btn_small grey ty_edit" onclick="call_bg_select(this);">배경수정</button>'+
-                            '<button type="button" class="btn_ctrl_bg btn_small grey" onclick="del_bg(this);">배경삭제</button>'+
-                        '</div>'+
-                    '</div>'
+
+                        '<div class="bg_section"  onclick="pos_change(this); return false">'+
+                            '<p class="p_url"><b>BG URL</b> : <span class="src_box">'+$src+'</span></p>'+
+                            '<div class="bg_section_bot">'+
+                                '<strong>배경전환 설정됨</strong>'+
+                                '<button type="button" class="btn_ctrl_bg btn_small grey ty_edit" onclick="call_bg_select(this);">배경수정</button>'+
+                                '<button type="button" class="btn_ctrl_bg btn_small grey" onclick="del_bg(this);">배경삭제</button>'+
+                            '</div>'+
+                        '</div>'
+
                 );
             }
 
