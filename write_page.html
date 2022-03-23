@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>스토리콘</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/nov_view.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+<body class="h100p">
+    <div id="wrap" class="sub h100p disable-dbl-tap-zoom noSelect">
+        <div id="container" class="h100p">
+            <div class="sub_inner h100p">
+                <div class="sub_header ty_write">
+                    <a href="" class="btn_back"><span class="blind">이전</span></a>
+                    <div class="write_tit">
+                        <label for="write_tit" class="btn_write white"><span class="blind">제목 입력</span></label>
+                        <input type="text" id="write_tit" class="write_tit_input" placeholder="제목을 입력해 주세요.">
+                    </div>
+                    <div class="btn_set">
+                        <button type="button" class="btn_small white">임시저장</button>
+                        <button type="button" class="btn_small white">미리보기</button>
+                    </div>
+                    <button type="button" class="btn_save white"><span class="blind">이전</span></button>
+                </div>
+                <div class="nov_write_wrap">
+                    <div id="nov_write" class="nov_write">
+                        <div id="write_pos" data-pos=""><span>입력위치</span></div>
+                    </div>
+                    <div class="input_wrap">
+                        <div>
+                            <button type="button" class="btn_add_bg" onclick="call_bg_select(this);">배경 전환 설정</button>
+                        </div>
+                        <div class="cha_wrap">
+                            <ul class="cha_list">
+                                <li class="cha_item ty">
+                                    <label for="common" class="cha_box ty_common">
+                                        <input type="radio" id="common" name="type" class="select_type" data-id="common" onclick="select_type(this);" checked>
+                                        <span class="cha_thumb"></span>
+                                        <span class="cha_name">지문</span>
+                                    </label>
+                                </li>
+                                <li class="cha_item">
+                                    <label for="p1" class="cha_box ty_cha">
+                                        <input type="radio" id="p1" name="type" class="select_type cha main" data-name="주인공" data-thumb="./images/thumb_p.png" data-id="p1" data-type="main"  onclick="select_type(this);">
+                                        <span class="cha_thumb"><img src="./images/thumb_p.png" alt=""></span>
+                                        <span class="cha_name">주인공</span>
+                                    </label>
+                                </li>
+                                <li class="cha_item">
+                                    <label for="p2" class="cha_box ty_cha">
+                                        <input type="radio" id="p2" name="type" class="select_type cha sub" data-name="사람1" data-thumb="./images/thumb_p2.png" data-id="p2" data-type="sub" onclick="select_type(this);">
+                                        <span class="cha_thumb"><img src="./images/thumb_p2.png" alt=""></span>
+                                        <span class="cha_name">사람1</span>
+                                    </label>
+                                </li>
+                                <li class="cha_item">
+                                    <label for="p3" class="cha_box ty_cha">
+                                        <input type="radio" id="p3" name="type" class="select_type cha sub" data-name="사람2" data-thumb="./images/thumb_p2.png" data-id="p3" data-type="sub" onclick="select_type(this);">
+                                        <span class="cha_thumb"><img src="./images/thumb_p2.png" alt=""></span>
+                                        <span class="cha_name">사람2</span>
+                                    </label>
+                                </li>
+                                <li class="cha_item">
+                                    <label for="p4" class="cha_box ty_cha">
+                                        <input type="radio" id="p4" name="type" class="select_type cha sub" data-name="사람3" data-thumb="./images/thumb_p2.png" data-id="p4" data-type="sub" onclick="select_type(this);">
+                                        <span class="cha_thumb"><img src="./images/thumb_p2.png" alt=""></span>
+                                        <span class="cha_name">사람3</span>
+                                    </label>
+                                </li>
+                                <li class="cha_item">
+                                    <label for="p5" class="cha_box ty_cha">
+                                        <input type="radio" id="p5" name="type" class="select_type cha sub" data-name="사람4" data-thumb="./images/thumb_p2.png" data-id="p5" data-type="sub" onclick="select_type(this);">
+                                        <span class="cha_thumb"><img src="./images/thumb_p2.png" alt=""></span>
+                                        <span class="cha_name">사람4</span>
+                                    </label>
+                                </li>
+                                <li class="cha_item">
+                                    <label for="p6" class="cha_box ty_cha">
+                                        <input type="radio" id="p6" name="type" class="select_type cha sub" data-name="사람5" data-thumb="./images/thumb_p2.png" data-id="p6" data-type="sub" onclick="select_type(this);">
+                                        <span class="cha_thumb"><img src="./images/thumb_p2.png" alt=""></span>
+                                        <span class="cha_name">사람5</span>
+                                    </label>
+                                </li>
+                                <li class="cha_item">
+                                    <label for="p7" class="cha_box ty_cha">
+                                        <input type="radio" id="p7" name="type" class="select_type cha sub" data-name="사람6" data-thumb="./images/thumb_p2.png" data-id="p7" data-type="sub" onclick="select_type(this);">
+                                        <span class="cha_thumb"><img src="./images/thumb_p2.png" alt=""></span>
+                                        <span class="cha_name">사람6</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn_add_cha">
+                                <span class="cha_thumb"></span>
+                                <span class="cha_name">인물추가</span>
+                            </button>
+                            <!-- <button type="button" class="btn_add_type">추가</button>
+                            <input type="text" class="added_name"> -->
+                        </div>
+                        <div class="input_area">
+                            <input type="text" class="input" placeholder="대사는 1회에 공백포함 40byte 까지만 입력">
+                            <button type="button" id="btn_input" class="btn_input">입력</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer_popup ty_full popup_img_select">
+                <div class="layer_popup_tit">
+                    <h2 class="tit">진행할 배경 선택</h2>
+                    <button class="btn_back black" onclick="close_pop(this);" ><span class="blind">팝업닫기</span></button>
+                </div>
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont">
+                        <div class="tab_set">
+                            <div class="tab_btns">
+                                <button type="button" class="tab_btn on">배경</button>
+                                <button type="button" class="tab_btn">직접등록</button>
+                            </div>
+                            <div class="tab_contents">
+                                <div class="tab_cont on">
+                                    <ul class="popup_img_list">
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link on">
+                                                <div class="img_box">
+                                                    <img src="./images/bg_sample.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg2.gif" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/bg_sample.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg2.gif" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/bg_sample.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg2.gif" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/bg_sample.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg2.gif" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/bg_sample.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg2.gif" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/bg_sample.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg2.gif" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/bg_sample.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg2.gif" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/bg_sample.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="popup_img_item">
+                                            <a href="" class="popup_img_link">
+                                                <div class="img_box">
+                                                    <img src="./images/view_bg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <script>
+                                        $('.popup_img_link').on('click',function(e){
+                                            e.preventDefault();
+                                            $('.popup_img_link').removeClass('on');
+                                            $('.btn_add_bg').data('bg','');
+                                            $(this).addClass('on');
+                                            var $src = $(this).find('img').attr('src');
+                                            $('.btn_add_bg').data('bg',$src);
+                                        });
+                                    </script>
+                                    <div class="layer_popup_bottom">
+                                        <button class="btn_mid btn_add_bg" onclick="add_bg(this);">등록</button>
+                                    </div>
+                                </div>
+                                <div class="tab_cont">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var $pos = $('#write_pos');
+        $(function(){
+            $('#btn_input').on('click',function(){
+
+                var $cont = $('.nov_write_wrap .input').val();
+                if(!$cont == "" && !$('.view_sec').hasClass('editing')){
+                    if($('#common').prop('checked')){
+                        $pos.before(
+                            '<span class="view_sec step txt default">'+
+                                '<span class="default_inner">'+
+                                    '<span class="cont_area" onclick="pos_change(this); return false">'+ $cont +'</span>'+
+                                    '<div class="btn_box">'+
+                                        '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
+                                        '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                    '</div>'+
+                                '</span>'+
+                            '</span>'
+                        )
+                    }
+                    $('.cha').each(function(){
+                        if($(this).prop('checked')){
+                            if($(this).data('type')=='main'){
+                                $pos.before(
+                                    '<span class="view_sec step ty_talk main" data-id='+$(this).data("id")+'>'+
+                                        '<div class="script_box right">'+
+                                            '<span class="thumb"><img src="'+$(this).data("thumb")+'" alt=""></span>'+
+                                            '<div class="txt_box">'+
+                                                '<span class="name">'+$(this).data("name")+'</span>'+
+                                                '<div class="script_list">'+
+                                                    '<span class="script">'+
+                                                        '<span class="cont_area" onclick="pos_change(this); return false">' + $cont +'</span>'+
+                                                    '</span>'+
+                                                    '<div class="btn_box">'+
+                                                        '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
+                                                        '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                                    '</div>'+
+                                                '</div>'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</span>'
+                                )
+                            }else{
+                                $pos.before(
+                                    '<span class="view_sec step ty_talk sub" data-id='+$(this).data("id")+'>'+
+                                        '<div class="script_box left">'+
+                                            '<span class="thumb"><img src="'+$(this).data("thumb")+'" alt=""></span>'+
+                                            '<div class="txt_box">'+
+                                                '<span class="name">'+$(this).data("name")+'</span>'+
+                                                '<div class="script_list">'+
+                                                    '<span class="script">'+
+                                                        '<span class="cont_area" onclick="pos_change(this); return false">' + $cont +'</span>'+
+                                                    '</span>'+
+                                                    '<div class="btn_box">'+
+                                                        '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
+                                                        '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                                    '</div>'+
+                                                '</div>'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</span>'
+                                )
+                            }
+                        }
+                    });
+
+                }
+
+                if(!$cont == "" && $('.view_sec').hasClass('editing')){
+                    console.log('수정', $cont);
+                    $('.view_sec.editing').find('.cont_area').text($cont);
+                }
+
+                $('.input').val(null);
+                $('.view_sec').removeClass('editing');
+
+                chk_script();
+
+                scroll_reset();
+            });
+
+
+
+
+
+            $('.input').keyup(function(e){
+                if (e.keyCode === 13) {
+                    // Cancel the default action, if needed
+                    e.preventDefault();
+                    // Trigger the button element with a click
+                    $("#btn_input").click();
+                }
+            });
+
+            $('.nov_write').on('click',function(e){
+                if(e.target == this){
+                    $pos.insertAfter($('.view_sec:last-child'));
+                }
+
+            });
+
+
+        });
+
+
+
+
+
+        function scroll_reset(){
+            //console.log($('#write_pos').position().top);
+            $('#nov_write').scrollTop(0);
+            $('#nov_write').scrollTop($('#write_pos').position().top - $('#nov_write').outerHeight()/2);
+        }
+        function edit(e){
+            var $target = $(e);
+            var $origin_script = $target.parents('.view_sec').find('.cont_area').html();
+            var $editing_sec = $target.parents('.view_sec');
+
+            $editing_sec.addClass('editing');
+            $('.input').val($origin_script);
+            $('.input').focus();
+
+        }
+        function pos_change(e){
+
+            var $target = $(e);
+            $pos.insertBefore($target.parents('.view_sec'));
+            //$('#nov_write').scrollTop($('#write_pos').position().top);
+
+
+        }
+        function del(e){
+
+            var $target = $(e);
+            $target.parents('.step').remove();
+            //e.stopPropagation();
+            chk_script()
+        }
+
+        function chk_script(){
+            $('.ty_talk').each(function(){
+                if($(this).prev('.ty_talk').data('id') == $(this).data('id') || $(this).prev('#write_pos').prev('.ty_talk').data('id') == $(this).data('id')){
+                    $(this).addClass('subordination')
+                }else{
+                    $(this).removeClass('subordination')
+                }
+
+            });
+        }
+
+        // $('.btn_add_type').on('click',function(){
+        //     var $val = $('.added_name').val();
+        //     var $id = $('.cha_list .cha').length + 1;
+        //     if(!$('.added_name').val() == ''){
+        //         if($('.cha_list').text().indexOf($val) > -1){
+        //             alert('같은 이름이 존재합니다');
+        //             $('.added_name').val('');
+        //         }else{
+        //             $('.cha_list').append(
+        //                 '<li><label for="p'+ $id +'"><input type="radio" id="p'+ $id +'" name="type" class="select_type cha sub" data-name="'+ $val +'" data-id="p'+ $id +'" data-type="sub" onclick="select_type(this);" >'+ $val +'</label></li>'
+        //             )
+        //             $('.added_name').val('');
+        //         }
+        //     }
+        // });
+
+
+        function select_type(e){
+            var $target = $(e);
+            $('#write_pos').data('pos',$target.data('id'));
+            console.log($('#write_pos').data('pos'));
+
+        }
+
+
+
+        //배경 수정 flag
+        var bg_editing = false;
+
+        //배경 추가
+        function add_bg(e){
+            var $this = $(e);
+            var $src = $this.data('bg');
+            if(bg_editing){
+                $('.bg_section.editing').find('.src_box').text($src);
+                bg_editing = false;
+            }else{
+                $pos.before(
+                    '<div class="bg_section">'+
+                        '<p class="p_url"><b>BG URL</b> : <span class="src_box">'+$src+'</span></p>'+
+                        '<div class="bg_section_bot">'+
+                            '<strong>배경전환 설정됨</strong>'+
+                            '<button type="button" class="btn_ctrl_bg btn_small grey ty_edit" onclick="call_bg_select(this);">배경수정</button>'+
+                            '<button type="button" class="btn_ctrl_bg btn_small grey" onclick="del_bg(this);">배경삭제</button>'+
+                        '</div>'+
+                    '</div>'
+                );
+            }
+
+            call_bg_select();
+            scroll_reset();
+
+        }
+
+        //배경 선택 팝업 불러오기
+        function call_bg_select(e){
+            var $this = $(e);
+            $('.bg_section').removeClass('editing');
+            if($('.popup_img_select').hasClass('on')){
+                $('.popup_img_select').removeClass('on');
+            }else{
+                $('.popup_img_select').addClass('on');
+            }
+
+            if($this.hasClass('ty_edit')){
+
+                $this.parents('.bg_section').addClass('editing');
+                bg_editing = true;
+            }
+        }
+
+        //배경 선택 팝업 불러오기
+        function del_bg(e){
+            var $this = $(e);
+            $this.parents('.bg_section').remove();
+        }
+
+        //레이어 팝업 닫기
+        function close_pop(e){
+            var $this = $(e);
+            $this.parents('.layer_popup').removeClass('on');
+        }
+
+    </script>
+</body>
+</html>

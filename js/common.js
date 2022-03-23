@@ -9,4 +9,14 @@ $(function(){
             $footer_policy.find('.txt_box').slideDown(200);
         }
     });
+
+
+    $('.btn_setting').on('click',function(){
+        var $setting_box = $(this).parent('.setting_set').find('.setting_box');
+        if($setting_box.hasClass('on')){
+            $setting_box.removeClass('on');
+        }else{
+            $setting_box.addClass('on');
+        }
+    });
 });
