@@ -226,6 +226,17 @@
 
 /* btns */
 .btn {
+    &_area {
+        &.ty_bot {
+            margin-top: 30px;
+        }
+        &.taC {
+            text-align: center;
+        }
+        &.taR {
+            text-align: right;
+        }
+    }
     &_small {
         display: inline-block;
         vertical-align: top;
@@ -303,7 +314,7 @@
 .layer_popup {
     display: none;
     position: fixed;
-    background-color: #fff;
+
     z-index: 9999;
     &.on {
         display: block;
@@ -312,6 +323,7 @@
     &.ty_full {
         width: 100%;
         height: 100%;
+        background-color: #fff;
         max-width: 740px;
         left: 50%;
         top: 0;
@@ -360,10 +372,93 @@
         .layer_popup_cont {
             padding-bottom: 10px;
         }
-
-
-
     }
+    &.popup_cha_img_select {
+        z-index: 99999;
+    }
+    &.popup_cha_select {
+
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(#000, .4);
+        left: 0;
+        top: 0;
+        .layer_popup_inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        .popup_cha_cont {
+            position: relative;
+            padding: 20px;
+            width: 260px;
+            border-radius: 20px 0 20px 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            text-align: center;
+            .btn_close {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                right: 0;
+                top: -20px;
+                background:#fff url(../images/ico/ico_close.svg) no-repeat center center;
+            }
+            .thumb_box {
+                display: block;
+                position: relative;
+                width: 60px;
+                height: 60px;
+                margin: 0 auto;
+                .img_box {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background:#e5e5e5 url(../images/ico/ico_empty_p.svg) no-repeat center center;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &::after {
+                    content:'';
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: #fff url('../images/ico/ico_camera.svg') no-repeat center center;
+                }
+            }
+            .cha_name {
+                display: block;
+                width: 160px;
+                margin: 0 auto;
+                margin-top: 10px;
+
+                height: 30px;
+                font-size: 14px;
+                border: none;
+                outline: none;
+                text-align: center;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            .btn_area {
+                margin-top: 20px;
+            }
+            .btn_mid {
+                min-width: 80px;
+                width: 80px;
+            }
+        }
+    }
+
 }
 .tab_set {
     .tab_btns {
@@ -382,7 +477,82 @@
             }
         }
     }
+    .tab_cont {
+        display: none;
+        &.on {
+            display: block;
+        }
+        &_inner {
+            padding: 20px;
+        }
+    }
 }
+
+.file_box {
+    position: relative;
+    &_txt {
+        height: 40px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        outline: none;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #424242;
+        &::placeholder {
+            color: #424242;
+        }
+    }
+    .input_file {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+    .btn_search {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       left: 0;
+       top: 0;
+       &::after {
+           content:'';
+           position: absolute;
+           width: 40px;
+           height: 40px;
+           background: url(../images/ico/Ico_search.svg) no-repeat center center;
+           right: 0;
+           top: 0;
+       }
+    }
+}
+
+.caution_list {
+    &.ty_bot {
+        margin-top: 10px;
+    }
+    li {
+        position: relative;
+        padding-left: 12px;
+        font-size: 11px;
+        line-height: 1.45;
+        color: #999;
+        & + li {
+            margin-top: 8px;
+        }
+        &::before {
+            content:'※';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
 
 .popup_img {
     &_list {
