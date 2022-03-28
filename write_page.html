@@ -100,7 +100,7 @@
                                     </label>
                                 </li>
                             </ul>
-                            <button type="button" class="btn_add_cha" onclick="call_cha_add()">
+                            <button type="button" class="btn_add_cha" onclick="call_cha_add(); reset_cha_popup();">
                                 <span class="cha_thumb"></span>
                                 <span class="cha_name">인물추가</span>
                             </button>
@@ -524,13 +524,17 @@
                             <div class="img_box"></div>
                         </div>
                         <input type="text" class="cha_name" value="" placeholder="이름을 입력해주세요.">
-                        <div class="btn_area ty_bot taC">
-                            <button class="btn_mid white">삭제</button>
-                            <button class="btn_mid">추가</button>
+                        <div class="btn_area ty_bot taC ty_add">
+                            <button class="btn_mid" onclick="add_cha();">추가</button>
+                        </div>
+                        <div class="btn_area ty_bot taC ty_edit">
+                            <button class="btn_mid white" onclick="del_cha();">삭제</button>
+                            <button class="btn_mid" onclick="edit_cha();">수정</button>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 
@@ -559,50 +563,96 @@
                     $('.cha').each(function(){
                         if($(this).prop('checked')){
                             if($(this).data('type')=='main'){
-                                $pos.before(
-                                    '<span class="view_sec step ty_talk main" data-id='+$(this).data("id")+'>'+
-                                        '<div class="script_box right">'+
-                                            '<span class="thumb"><img src="'+$(this).data("thumb")+'" alt=""></span>'+
-                                            '<div class="txt_box">'+
-                                                '<span class="name">'+$(this).data("name")+'</span>'+
-                                                '<div class="script_list">'+
-                                                    '<span class="script">'+
-                                                        '<span class="cont_area" onclick="pos_change(this); return false">' + $cont +'</span>'+
-                                                    '</span>'+
-                                                    '<div class="btn_box">'+
-                                                        '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
-                                                        '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                if($(this).data("thumb")){
+                                    $pos.before(
+                                        '<span class="view_sec step ty_talk main" data-id='+$(this).data("id")+'>'+
+                                            '<div class="script_box right">'+
+                                                '<span class="thumb"><img src="'+$(this).data("thumb")+'" alt=""></span>'+
+                                                '<div class="txt_box">'+
+                                                    '<span class="name">'+$(this).data("name")+'</span>'+
+                                                    '<div class="script_list">'+
+                                                        '<span class="script">'+
+                                                            '<span class="cont_area" onclick="pos_change(this); return false">' + $cont +'</span>'+
+                                                        '</span>'+
+                                                        '<div class="btn_box">'+
+                                                            '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
+                                                            '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                                        '</div>'+
                                                     '</div>'+
                                                 '</div>'+
                                             '</div>'+
-                                        '</div>'+
-                                    '</span>'
-                                )
+                                        '</span>'
+                                    )
+                                }else{
+                                    $pos.before(
+                                        '<span class="view_sec step ty_talk main" data-id='+$(this).data("id")+'>'+
+                                            '<div class="script_box right">'+
+                                                '<span class="thumb"></span>'+
+                                                '<div class="txt_box">'+
+                                                    '<span class="name">'+$(this).data("name")+'</span>'+
+                                                    '<div class="script_list">'+
+                                                        '<span class="script">'+
+                                                            '<span class="cont_area" onclick="pos_change(this); return false">' + $cont +'</span>'+
+                                                        '</span>'+
+                                                        '<div class="btn_box">'+
+                                                            '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
+                                                            '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                                        '</div>'+
+                                                    '</div>'+
+                                                '</div>'+
+                                            '</div>'+
+                                        '</span>'
+                                    )
+                                }
+                                
                             }else{
-                                $pos.before(
-                                    '<span class="view_sec step ty_talk sub" data-id='+$(this).data("id")+'>'+
-                                        '<div class="script_box left">'+
-                                            '<span class="thumb"><img src="'+$(this).data("thumb")+'" alt=""></span>'+
-                                            '<div class="txt_box">'+
-                                                '<span class="name">'+$(this).data("name")+'</span>'+
-                                                '<div class="script_list">'+
-                                                    '<span class="script">'+
-                                                        '<span class="cont_area" onclick="pos_change(this); return false">' + $cont +'</span>'+
-                                                    '</span>'+
-                                                    '<div class="btn_box">'+
-                                                        '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
-                                                        '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                if($(this).data("thumb")){
+                                    $pos.before(
+                                        '<span class="view_sec step ty_talk sub" data-id='+$(this).data("id")+'>'+
+                                            '<div class="script_box left">'+
+                                                '<span class="thumb"><img src="'+$(this).data("thumb")+'" alt=""></span>'+
+                                                '<div class="txt_box">'+
+                                                    '<span class="name">'+$(this).data("name")+'</span>'+
+                                                    '<div class="script_list">'+
+                                                        '<span class="script">'+
+                                                            '<span class="cont_area" onclick="pos_change(this); return false">' + $cont +'</span>'+
+                                                        '</span>'+
+                                                        '<div class="btn_box">'+
+                                                            '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
+                                                            '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                                        '</div>'+
                                                     '</div>'+
                                                 '</div>'+
                                             '</div>'+
-                                        '</div>'+
-                                    '</span>'
-                                )
+                                        '</span>'
+                                    )
+                                }else{
+                                    $pos.before(
+                                        '<span class="view_sec step ty_talk sub" data-id='+$(this).data("id")+'>'+
+                                            '<div class="script_box left">'+
+                                                '<span class="thumb"></span>'+
+                                                '<div class="txt_box">'+
+                                                    '<span class="name">'+$(this).data("name")+'</span>'+
+                                                    '<div class="script_list">'+
+                                                        '<span class="script">'+
+                                                            '<span class="cont_area" onclick="pos_change(this); return false">' + $cont +'</span>'+
+                                                        '</span>'+
+                                                        '<div class="btn_box">'+
+                                                            '<button type="button" class="btn_del" onclick="del(this);"><span class="blind">삭제</span></button>'+
+                                                            '<button type="button" class="btn_edit" onclick="edit(this);"><span class="blind">수정하기</span></button>'+
+                                                        '</div>'+
+                                                    '</div>'+
+                                                '</div>'+
+                                            '</div>'+
+                                        '</span>'
+                                    )
+                                }
+                                
                             }
                         }
-                    });
-
+                    });   
                 }
+
 
                 if(!$cont == "" && $('.view_sec').hasClass('editing')){
                     console.log('수정', $cont);
@@ -616,9 +666,6 @@
 
                 scroll_reset();
             });
-
-
-
 
 
             $('.input').keyup(function(e){
@@ -636,14 +683,6 @@
                 }
 
             });
-
-
-
-
-
-
-
-
         });
 
 
@@ -660,6 +699,7 @@
             var $origin_script = $target.parents('.view_sec').find('.cont_area').html();
             var $editing_sec = $target.parents('.view_sec');
 
+            $('.view_sec').removeClass('editing');
             $editing_sec.addClass('editing');
             $('.input').val($origin_script);
             $('.input').focus();
@@ -696,14 +736,75 @@
 
 
 
-
+        
         function select_type(e){
             var $target = $(e);
+            var $cha_box = $target.parents('.cha_box');
+
+            if($cha_box.hasClass('on') && $target.data('id') != 'common'){
+                call_cha_edit($target)
+            }
+
+            $('.cha_wrap .cha_box').removeClass('on');
+            $cha_box.addClass('on');
             $('#write_pos').data('pos',$target.data('id'));
             console.log($('#write_pos').data('pos'));
-
         }
 
+
+        function call_cha_edit(e){
+            var $origin_name = e.data('name');
+            var $origin_thumb = e.data('thumb');
+            var $origin_id = e.data('id');
+            $('.popup_cha_select').addClass('editing');
+            if(e.data('type') == 'main'){
+                $('.popup_cha_select .btn_area.ty_edit').html(
+                    '<button class="btn_mid" onclick="edit_cha();">수정</button>'
+                )
+            }else if(e.data('type') == 'sub'){
+                $('.popup_cha_select .btn_area.ty_edit').html(
+                    '<button class="btn_mid white" onclick="del_cha();">삭제</button> '+
+                    '<button class="btn_mid" onclick="edit_cha();">수정</button>'
+                )
+            }
+            $('.popup_cha_select').data('edit',$origin_id);
+            
+            
+            $('.popup_cha_select').find('.img_box').html('<img src="'+$origin_thumb+'" alt="">');
+            $('.popup_cha_select').find('.cha_name').val($origin_name)
+
+            call_cha_add();
+        }
+
+
+        function edit_cha(){
+            var $val = $popup_cha_name.val();
+            var $thumb = $popup_cha_thumb.find('img').attr('src');
+            var $selected_cha_box = $('.cha_wrap .cha_box.on');
+            var $editing_id = $('.popup_cha_select').data('edit');
+            $selected_cha_box.find('.select_type').data('name',$val);
+            $selected_cha_box.find('.select_type').data('thumb',$thumb);
+            $selected_cha_box.find('.cha_name').html($val);
+            $selected_cha_box.find('.cha_thumb img').attr('src',$thumb);
+
+            //console.log($('.step[data-id="'+$editing_id+'"]'))
+            var $editing_step = $('.step[data-id="'+$editing_id+'"]');
+            $('.step[data-id="'+$editing_id+'"]').find('.name').html($val);
+            $('.step[data-id="'+$editing_id+'"]').find('.thumb img').attr('src',$thumb);
+            close_cha_add()
+        }
+
+        var $deleted_count = 0;
+        function del_cha(){
+            var $selected_cha_box = $('.cha_wrap .cha_box.on');
+            var $editing_id = $('.popup_cha_select').data('edit');
+            var $editing_step = $('.step[data-id="'+$editing_id+'"]');
+            $selected_cha_box.parents('.cha_item').remove();
+            $editing_step.remove();
+            $deleted_count += 1;
+            chk_script();
+            close_cha_add()
+        }
 
 
         //배경 수정 flag
@@ -739,7 +840,7 @@
 
 
             call_bg_select(); //팝업닫기
-            chk_script() // 대사 체크
+            chk_script(); // 대사 체크
             scroll_reset(); // 스크롤 리셋
 
         }
@@ -785,6 +886,7 @@
         function del_bg(e){
             var $this = $(e);
             $this.parents('.bg_section_wrap').remove();
+            chk_script();
         }
 
         //레이어 팝업 닫기
@@ -801,8 +903,13 @@
 
         //케릭터 추가 불러오기
         function call_cha_add(){
-            reset_cha_popup();
+            
             $('.popup_cha_select').addClass('on');
+        }
+
+        function close_cha_add(){
+            reset_cha_popup();
+            $('.popup_cha_select').removeClass('on').removeClass('editing');
         }
         function call_cha_select(){
             $('.popup_cha_img_select').addClass('on');
@@ -812,6 +919,7 @@
         }
 
         function reset_cha_popup(){
+            $('.popup_cha_select').removeClass('editing');
             $popup_cha_thumb.html('');
             $popup_cha_name.val('');
         }
@@ -851,6 +959,45 @@
         function add_cha(){
             var $val = $popup_cha_name.val();
             var $thumb = $popup_cha_thumb.find('img').attr('src');
+            var $id = $('.cha_list .cha').length + 1 + $deleted_count;
+            if($val){
+                if($('.cha_list').text().indexOf($val) > -1){
+                    alert('같은 이름이 존재합니다');
+                    $popup_cha_name.val('');
+                }else{
+                    if($thumb){
+                        $('.cha_list').append(
+                            '<li class="cha_item">'+
+                                '<label for="p'+ $id +'" class="cha_box ty_cha">'+
+                                    '<input type="radio" id="p'+ $id +'" name="type" class="select_type cha sub" data-name="'+$val+'" data-thumb="'+$thumb+'" data-id="p'+ $id +'" data-type="sub" onclick="select_type(this);">'+
+                                    '<span class="cha_thumb">'+
+                                        '<img src="'+$thumb+'" alt="">'+
+                                    '</span>'+
+                                    '<span class="cha_name">'+$val+'</span>'+
+                                '</label>'+
+                            '</li>'
+                        )
+                        close_cha_add();
+                        console.log('img');
+                    }else{
+                        $('.cha_list').append(
+                            '<li class="cha_item">'+
+                                '<label for="p'+ $id +'" class="cha_box ty_cha">'+
+                                    '<input type="radio" id="p'+ $id +'" name="type" class="select_type cha sub" data-name="'+$val+'" data-id="p'+ $id +'" data-type="sub" onclick="select_type(this);">'+
+                                    '<span class="cha_thumb"></span>'+
+                                    '<span class="cha_name">'+$val+'</span>'+
+                                '</label>'+
+                            '</li>'
+                        )
+                        close_cha_add();
+                        console.log('imgX');
+                    }
+                    
+                    $('.cha_list').scrollLeft($('.cha_list')[0].scrollWidth);
+                }
+            }else{
+                alert('이름을 입력해 주세요.');
+            }
         }
 
 

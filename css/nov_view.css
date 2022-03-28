@@ -127,7 +127,7 @@ body { overscroll-behavior-y: contain; }
 
 .script_box.right .thumb { right: 0; }
 
-.script_box .thumb { width: 40px; height: 40px; border-radius: 100%; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #dcdcdc; -ms-flex-negative: 0; flex-shrink: 0; position: absolute; top: 5px; }
+.script_box .thumb { width: 40px; height: 40px; border-radius: 100%; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #ccc; -ms-flex-negative: 0; flex-shrink: 0; position: absolute; top: 5px; background-image: url(../images/ico/ico_empty_p.svg); background-repeat: no-repeat; background-position: center center; background-size: 50%; }
 
 .script_box .thumb img { width: 100%; height: 100%; }
 
@@ -169,6 +169,8 @@ body { overscroll-behavior-y: contain; }
 .view_sec .right .btn_edit { margin-left: 0; margin-right: 5px; }
 
 .nov_write .view_sec.editing.step.ty_talk .cont_area { background-color: rgba(255, 0, 0, 0.3); }
+
+.nov_write .view_sec.editing.step.ty_talk .cont_area::before { border-right-color: rgba(255, 0, 0, 0.3); border-left-color: rgba(255, 0, 0, 0.3); }
 
 .nov_write .view_sec.editing.step.txt .cont_area { background-color: rgba(255, 0, 0, 0.3); }
 
@@ -216,7 +218,7 @@ body { overscroll-behavior-y: contain; }
 
 .input_wrap .cha_wrap .cha_thumb img { width: 100%; height: 100%; }
 
-.input_wrap .cha_wrap .cha_name { display: block; font-size: 12px; line-height: 15px; margin-top: 4px; font-weight: 500; }
+.input_wrap .cha_wrap .cha_name { display: block; font-size: 12px; line-height: 15px; margin-top: 4px; font-weight: 500; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100%; }
 
 .input_wrap .cha_wrap .cha_box { display: block; width: 40px; text-align: center; }
 
@@ -224,7 +226,7 @@ body { overscroll-behavior-y: contain; }
 
 .input_wrap .cha_wrap .cha_box.ty_common .cha_thumb { background: rgba(0, 0, 0, 0.3); }
 
-.input_wrap .cha_wrap .cha_box.ty_cha .cha_thumb { background: url(../images/ico/ico_p.svg) no-repeat center center; }
+.input_wrap .cha_wrap .cha_box.ty_cha .cha_thumb { background-image: url(../images/ico/ico_empty_p.svg); background-size: 50%; background-repeat: no-repeat; background-position: center center; }
 
 .input_wrap .cha_wrap .cha_box input[type="radio"] { position: absolute; z-index: -9999; opacity: 0; visibility: hidden; }
 
