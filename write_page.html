@@ -799,11 +799,19 @@
             var $selected_cha_box = $('.cha_wrap .cha_box.on');
             var $editing_id = $('.popup_cha_select').data('edit');
             var $editing_step = $('.step[data-id="'+$editing_id+'"]');
-            $selected_cha_box.parents('.cha_item').remove();
-            $editing_step.remove();
-            $deleted_count += 1;
-            chk_script();
-            close_cha_add()
+
+            if(confirm('인물과 인물의 모든 대화가 삭제됩니다.\n삭제하시겠습니까?') == true){
+                $selected_cha_box.parents('.cha_item').remove();
+                $editing_step.remove();
+                $deleted_count += 1;
+                chk_script();
+                close_cha_add();
+            }else{
+                return false;
+            }
+           
+
+            
         }
 
 
