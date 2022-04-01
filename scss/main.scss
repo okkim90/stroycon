@@ -20,6 +20,9 @@ body {
 
             img {
                 max-width: 100%;
+                &.only_m {
+                    display: none;
+                }
             }
         }
     }
@@ -68,6 +71,8 @@ body {
 
 .main_popular {
     width: 760px;
+    display: flex;
+    flex-direction: column;
     &_tit {
         display: flex;
         align-items: center;
@@ -121,6 +126,7 @@ body {
                 line-height: 30px;
                 font-weight: bold;
                 transition: all .1s ease-in-out;
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -135,7 +141,8 @@ body {
                 }
                 &.on {
                     color: #5e25c7;
-                    transform: scale(1.12);
+                    font-size: 22px;
+
                     font-weight: bold;
                     font-family: 'Godo';
                     &::after {
@@ -150,6 +157,7 @@ body {
         }
     }
     &_conts {
+        flex: 1;
         padding: 43px 40px 24px;
         background-color: #fff;
         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
@@ -173,26 +181,28 @@ body {
             box-sizing: border-box;
             padding: 0 20px;
             margin-top: 25px;
-            .sc_thumb_rank {
-                position: absolute;
-                font-size: 45px;
-                line-height: 1;
-                font-family: Arial;
-                letter-spacing: -0.45px;
-                color: #5e25c7;
-                text-shadow: 3px 3px 3px rgba(94, 37, 199, 0.2);
-                right: 12px;
-                top: -25px;
-                z-index: 10;
-                font-weight: 900;
-            }
+
         }
-        .tit_box {
+        .sc_tit {
+            display: flex;
+            align-items: center;
             font-size: 16px;
             line-height: 1.5;
             letter-spacing: -0.16px;
             font-weight: 500;
             margin-top: 5px;
+            .sc_tag {
+                flex-shrink: 0;
+                margin-right: 4px;
+            }
+        }
+    }
+    .scList {
+        margin: 0 -15px;
+        margin-top: -55px;
+        &_item {
+            padding: 0 15px;
+            margin-top: 55px;
         }
     }
 }
@@ -336,6 +346,7 @@ body {
             line-height: 40px;
             strong {
                 font-weight: bold;
+                vertical-align: top;
             }
         }
         .sort_btns {
@@ -371,10 +382,36 @@ body {
 
 
 @media (max-width: 1024px) {
+    .mv {
+        &_wrap {
+            position: relative;
+            border-radius: 0 0 30px 0;
+            overflow: hidden;
+        }
+        .mv_pagination {
+            margin-top: 0;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 10px;
+            z-index: 10;
+        }
+        &_item_link img {
+            &.only_pc {
+                display: none;
+            }
+            &.only_m {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
     .main_sec_wrap {
         display: block;
     }
     .main_popular {
+        display: block;
         width: 100%;
         &_tit {
             margin-left: 30px;
@@ -402,7 +439,9 @@ body {
 
 
 @media (max-width: 767px) {
-
+    .main #container {
+        padding-bottom: 0;
+    }
     .main_popular {
         &_conts {
             padding: 0;
@@ -410,15 +449,84 @@ body {
             box-shadow: none;
         }
         &_list {
-            margin-top: 0;
+            margin: 0 -5px;
+            margin-top: -25px;
+            &_item {
+                padding: 0 5px;
+            }
+        }
+        .scList {
+            margin: 0 -5px;
+            margin-top: -25px;
+            padding-bottom: 0;
+            &_item {
+                padding: 0 5px;
+                margin-top: 25px;
+            }
         }
     }
+
+    .main_popular {
+        &_tit {
+            position: relative;
+            margin-left: 0;
+            margin-right: 0;
+            h2 {
+                font-size: 17px;
+            }
+            .date {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: 10px;
+                line-height: 12px;
+                margin-left: 0;
+            }
+            .btn_more {
+                padding: 0;
+                background-color: transparent;
+                border-radius: 0;
+                box-shadow: none;
+                width: auto;
+                span {
+                    padding-right: 5px;
+                }
+            }
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        &_tabs {
+            margin-left: 10px;
+            li {
+                .btn_tab {
+                    font-size: 17px;
+                    &.on {
+                        font-size: 19px;
+                    }
+                }
+            }
+            li + li {
+                margin-left: 8px;
+            }
+        }
+        &_list {
+            .sc_tit {
+                font-size: 13px;
+                line-height: 16px;
+            }
+
+        }
+
+    }
+
+
 
     .main_recommend {
         width: auto;
         margin-right: -20px;
         &_inner {
             padding-right: 0;
+            box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2);
         }
         &_tit {
             width: auto;
@@ -435,6 +543,7 @@ body {
             margin-left: 0;
             margin-right: 0;
             padding-bottom: 10px;
+            padding-right: 20px;
             .sc_gal_item {
                 width: 100px;
                 padding: 0;
@@ -444,4 +553,32 @@ body {
             }
         }
     }
+
+    .main_sec_wrap2.inner {
+        padding-left: 0;
+        padding-right: 0;
+        .main_sec_wrap_inner {
+            padding-left: 20px;
+            padding-right: 0;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+    .main_best + .main_best {
+        margin-top: 25px;
+    }
+    .main_best_tit {
+        padding-right: 20px;
+        margin-bottom: 14px;
+        h2 {
+            font-size: 17px;
+            line-height: 36px;
+        }
+        .sort_btns .sort_btn {
+            font-size: 12px;
+            height: 36px;
+            padding: 0 10px;
+        }
+    }
+
 }
