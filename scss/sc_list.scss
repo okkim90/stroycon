@@ -116,6 +116,7 @@
     font-size: 0;
     &_link {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     &_item {
@@ -140,7 +141,7 @@
                 }
                 font-size: 16px;
                 letter-spacing: -0.16px;
-                line-height: 1.5;
+                line-height: 1.3;
             }
             .sc_writer {
                 margin-top: 4px;
@@ -163,6 +164,27 @@
         }
     }
 
+    .sc_comment {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background-color: rgba(94, 37, 199, 0.07);
+        border: solid 1px rgba(94, 37, 199, 0.2);
+        border-radius: 8px;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.38;
+        letter-spacing: -0.13px;
+        color: #424242;
+        &_tit {
+            display: block;
+            font-size: 15px;
+            line-height: 1.13;
+            letter-spacing: -0.15px;
+            color: #5e25c7;
+            margin-bottom: 4px;
+        }
+    }
     &.ty_responsive {
         .scList_item {
             display: inline-block;
@@ -176,6 +198,29 @@
         }
     }
     &.ty_best {
+        margin: 0 -15px;
+        margin-top: -37px;
+        .scList_item {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100%/3);
+            margin-top: 37px;
+            padding: 0 15px;
+        }
+    }
+
+    &.ty_best_sub {
+        margin: 0 -15px;
+        margin-top: -37px;
+        .scList_item {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100%/3);
+            margin-top: 37px;
+            padding: 0 15px;
+        }
+    }
+    &.ty_best_sub2 {
         margin: 0 -15px;
         margin-top: -37px;
         .scList_item {
@@ -210,10 +255,15 @@
         }
         &.ty_best {
             .scList_item {
-
                 width: calc(100%/2);
             }
         }
+        &.ty_best_sub2 {
+            .scList_item {
+                width: calc(100%/2);
+            }
+        }
+
     }
 }
 
@@ -229,6 +279,13 @@
                 }
             }
         }
+
+        .sc_comment {
+            margin-top: 10px;
+            font-size: 12px;
+            padding: 12px 10px;margin-bottom: 15px;
+        }
+
         &.ty_responsive {
             .scList_link {
                 display: block;
@@ -266,6 +323,16 @@
             .sc_counter.ty2 {
                 display: none;
             }
+
+            &.ty_best_sub {
+                margin: 0 -5px;
+                margin-top: -14px;
+                .scList_item {
+                    padding: 0 5px;
+                    margin-top: 14px;
+                }
+
+            }
         }
         &.ty_best {
             margin: 0 -10px;
@@ -295,6 +362,64 @@
                 }
                 .sc_counter.ty2 {
                     margin-top: 6px;
+                }
+            }
+        }
+
+        &.ty_best_sub2 {
+            margin: 0;
+            margin-top: 0;
+            .scList_item {
+                display: block;
+                width: 100%;
+                width: calc(100%);
+                margin-top: 0;
+                padding: 0;
+                & + .scList_item {
+                    margin-top: 10px;
+                }
+            }
+            .sc_thumb_box {
+                width: 80px;
+            }
+            .txt_box {
+                padding-left: 10px;
+                display: flex;
+                    flex-wrap: wrap;
+                .tit {
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+                .sc_writer {
+                   order: 1;
+                   margin-top: 10px;
+                   margin-right: 10px;
+                   &_name {
+                       max-width: 70px;
+                       white-space: nowrap;
+                       text-overflow: ellipsis;
+                       overflow: hidden;
+                       box-sizing: border-box;
+                   }
+                }
+                .sc_counter {
+                    order: 2;
+                    margin-top: 10px;
+
+                    &_item {
+                        line-height: 18px;
+                    }
+                }
+                .info_txt {
+                    font-size: 12px;
+                    line-height: 17px;
+                    white-space: nowrap;
+                    display: block;
+                    height: auto;
+                    margin-top: 4px;
+                    -webkit-line-clamp: unset;
+                    -webkit-box-orient: unset;
+
                 }
             }
         }
@@ -390,6 +515,9 @@
     .sc_tit {
         display: flex;
         align-items: center;
+        h3 {
+            font-weight: 500;
+        }
         .sc_tag {
             flex-shrink: 0;
             margin-right: 4px;
@@ -525,7 +653,7 @@
             }
         }
         .sc_gal_item {
-            padding: 0 5px;
+            padding: 0;
             .txt_area {
                 .sc_counter.ty1 {
                     position: static;
@@ -535,7 +663,7 @@
                     .sc_counter_item {
                         display: inline-block;
                         vertical-align: top;
-                        padding-left: 14px;
+                        padding-left: 13px;
                         position: relative;
                         font-size: 10px;
                         line-height: 14px;
@@ -543,13 +671,22 @@
                         background-position: 0 center;
                         color: #666;
                         margin-left: 4px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        box-sizing: border-box;
+
                     }
                     .sc_counter_view {
+                        max-width: 36px;
                         background-image: url(../images/ico/sc_ico_view_c.svg);
+
                     }
                     .sc_counter_like {
-                        padding-left: 13px;
+                        max-width: 34px;
+                        padding-left: 11px;
                         background-image: url(../images/ico/sc_ico_like_c.svg);
+
                     }
                 }
                 .sc_tit {

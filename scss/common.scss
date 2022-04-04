@@ -4,7 +4,10 @@
 #wrap {
     min-width: 1240px;
 }
-
+#container.sub {
+    //padding-top: 180px;
+    padding-bottom: 80px;
+}
 
 .header {
     background-color: #fff;
@@ -127,13 +130,42 @@
                 li {
                     display: inline-block;
                     vertical-align: top;
+
+                    & + li {
+                        margin-left: 50px;
+                    }
                     a {
                         display: block;
                         font-size: 20px;
                         font-weight: bold;
                         line-height: 50px;
                         color: #212121;
-                        padding: 0 20px;
+
+                        span {
+                            display: block;
+                            position: relative;
+                            padding: 0 10px;
+
+                        }
+                    }
+                    &.on {
+                        font-family: 'Godo';
+                        a {
+                            font-size: 24px;
+                            span {
+                                &::after {
+                                    content:'';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 8px;
+                                    background-color: rgba(119, 0, 255, 0.2);
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    z-index: -1;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -338,8 +370,62 @@
             background-color: #fff;
         }
     }
+    &_more {
+        display: inline-block;
+        vertical-align: top;
+        width: 80px;
+        flex-shrink: 0;
+        padding: 0 12px 0 15px;
+        box-sizing: border-box;
+        background-color: #fff;
+        height: 30px;
+
+        border-radius: 15px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+        span {
+            position: relative;
+            display: block;
+            width: 100%;
+            line-height: 30px;
+            font-size: 14px;
+            background-image: url(/images/ico/arrow_more.svg);
+            background-repeat: no-repeat;
+            background-position: right 55%;
+        }
+    }
 }
 
+
+.tag_list {
+    font-size: 0;
+    margin-left: -5px;
+    margin-top: -5px;
+    &_item {
+        width: auto;
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 5px;
+        & + .tag_list_item {
+
+
+        }
+    }
+    &_btn {
+        border: solid 1px rgba(0, 0, 0, 0.07);
+        border-radius: 12px;
+        padding: 0 10px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 22px;
+        color: #424242;
+        &.on {
+            border: solid 1px rgba(94, 37, 199, 0.5);
+            color: #5e25c7;
+            font-weight: 500;
+        }
+
+    }
+}
 
 .layer_popup {
     display: none;
@@ -1063,7 +1149,13 @@
     font-weight: 900;
 }
 
+
+
+
 @media (max-width:1024px) {
+    #container.sub {
+        padding-top: 90px;
+    }
     .header {
         min-width: auto;
         position: fixed;
@@ -1111,10 +1203,21 @@
             height: 40px;
             .nav_list {
                 li {
+                    & + li {
+                        margin-left: 20px;
+                    }
                     a {
                         font-size: 14px;
-                        padding: 0 20px;
                         line-height: 40px;
+                        span {
+                            padding: 0 5px;
+                        }
+                    }
+                    &.on {
+                        a {
+                            font-size: 18px;
+
+                        }
                     }
                 }
             }
@@ -1187,4 +1290,20 @@
             }
         }
     }
+    .btn {
+        &_more {
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            width: auto;
+            height: 26px;
+            span {
+                padding-right: 12px;
+                box-sizing: border-box;
+                line-height: 26px;
+            }
+        }
+    }
+
 }
