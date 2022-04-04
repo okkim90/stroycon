@@ -829,7 +829,7 @@
         </footer>
     </div>
 
-    <!--<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>-->
+
     <script src="./js/swiper.min.js"></script>
     <script>
         var mv = new Swiper('.mv',{
@@ -843,14 +843,6 @@
                 clickable:true,
                 el: '.mv_pagination'
             }
-        });
-
-        var tags = new Swiper('.tag_wrap',{
-            slidesPerView: "auto",
-            navigation: {
-                nextEl: '.tag_swipe_next',
-                prevEl: '.tag_swipe_prev'
-            },
         });
         $(window).on('load resize scroll',function(){
             if($(this).scrollTop() > 0){

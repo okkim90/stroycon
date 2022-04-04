@@ -446,6 +446,9 @@ body {
 
 
 @media (max-width: 767px) {
+    body.sub {
+        background-color: #fff;
+    }
     .main #container {
         padding-bottom: 0;
     }
@@ -580,9 +583,7 @@ body {
     }
 
 
-    body.sub {
-        background-color: #fff;
-    }
+
 
     .sub_sec_wrap {
         margin-top: 34px;
