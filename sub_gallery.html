@@ -59,20 +59,29 @@
                     </li>
                 </ul>
             </div>
-            <div class="sub_inner ty_pd">
-                <ul class="tag_list">
-                    <li class="tag_list_item"><button class="tag_list_btn on">#전체</button></li>
-                    <li class="tag_list_item"><button class="tag_list_btn">#무협</button></li>
-                    <li class="tag_list_item"><button class="tag_list_btn">#판타지</button></li>
-                    <li class="tag_list_item"><button class="tag_list_btn">#퓨전</button></li>
-                    <li class="tag_list_item"><button class="tag_list_btn">#게임</button></li>
-                    <li class="tag_list_item"><button class="tag_list_btn">#SF</button></li>
-                    <li class="tag_list_item"><button class="tag_list_btn">#학원</button></li>
-                </ul>
-                <div class="search_box">
-                    <input type="text" placeholder="작가명 작품명을 입력해 보세요.">
-                    <button type="button"><span class="blind">검색</span></button>
+            <div class="inner">
+                <!-- if 키워드 작품 -->
+                <div class="top_sort_area">
+                    <div class="top_sort_sec">
+                        <ul class="tag_list taC">
+                            <li class="tag_list_item"><button class="tag_list_btn on">#전체</button></li>
+                            <li class="tag_list_item"><button class="tag_list_btn">#무협</button></li>
+                            <li class="tag_list_item"><button class="tag_list_btn">#판타지</button></li>
+                            <li class="tag_list_item"><button class="tag_list_btn">#퓨전</button></li>
+                            <li class="tag_list_item"><button class="tag_list_btn">#게임</button></li>
+                            <li class="tag_list_item"><button class="tag_list_btn">#SF</button></li>
+                            <li class="tag_list_item"><button class="tag_list_btn">#학원</button></li>
+                        </ul>
+                    </div>
+                    <div class="top_sort_sec sc_search_wrap taC">
+                        <div class="sc_search">
+                            <input type="text" class="sc_search_input" placeholder="작가명 작품명을 입력해 보세요.">
+                            <button type="button" class="sc_search_btn"><span class="blind">검색</span></button>
+                        </div>
+                    </div>
                 </div>
+                <!--// if 키워드 작품 -->
+                
                 <ul class="sc_gal ty_mid masonry_list ty_masonry">
                     <li class="sc_gal_item masonry_item">
                         <a href="" class="sc_gal_item_link">
@@ -93,10 +102,12 @@
                                 <div class="sc_tit">
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
+                                <!--작가 작품 페이지 이동 버튼-->
+                                <button class="sc_writer" onclick="location.href='index.html'; return false">
                                     <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
                                     <span class="sc_writer_name">작가이름노출</span>
-                                </div>
+                                </button>
+                                <!--//작가 작품 페이지 이동 버튼-->
                             </div>
                         </a>
                     </li>
@@ -119,10 +130,12 @@
                                 <div class="sc_tit">
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
+                                <!--작가 작품 페이지 이동 버튼-->
+                                <button class="sc_writer" onclick="location.href=''; return false">
                                     <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
                                     <span class="sc_writer_name">작가이름노출</span>
-                                </div>
+                                </button>
+                                <!--//작가 작품 페이지 이동 버튼-->
                             </div>
                         </a>
                     </li>
@@ -142,10 +155,12 @@
                                 <div class="sc_tit">
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
+                                <!--작가 작품 페이지 이동 버튼-->
+                                <button class="sc_writer" onclick="location.href=''; return false">
                                     <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
                                     <span class="sc_writer_name">작가이름노출</span>
-                                </div>
+                                </button>
+                                <!--//작가 작품 페이지 이동 버튼-->
                             </div>
                         </a>
                     </li>
@@ -168,108 +183,118 @@
                                 <div class="sc_tit">
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="sc_gal_item masonry_item">
-                        <a href="" class="sc_gal_item_link">
-                            <div class="sc_thumb ty_noresize">
-                                <div class="sc_tag_box">
-                                    <span class="sc_tag up"><span>UP</span></span>
-                                    <span class="sc_tag pay"><span>₩</span></span>
-                                </div>
-                                <div class="sc_thumb_img">
-                                    <img src="https://picsum.photos/200" alt="">
-                                </div>
-                            </div>
-                            <div class="txt_area">
-                                <div class="sc_counter ty1 ty_inside">
-                                    <span class="sc_counter_item sc_counter_view">5246</span>
-                                    <span class="sc_counter_item sc_counter_like">245</span>
-                                </div>
-                                <div class="sc_tit">
-                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
-                                </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="sc_gal_item masonry_item">
-                        <a href="" class="sc_gal_item_link">
-                            <div class="sc_thumb ty_noresize">
-
-                                <div class="sc_thumb_img">
-                                    <img src="https://picsum.photos/200/300" alt="">
-                                </div>
-                            </div>
-                            <div class="txt_area">
-                                <div class="sc_counter ty1 ty_inside">
-                                    <span class="sc_counter_item sc_counter_view">5246</span>
-                                    <span class="sc_counter_item sc_counter_like">245</span>
-                                </div>
-                                <div class="sc_tit">
-                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
-                                </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="sc_gal_item masonry_item">
-                        <a href="" class="sc_gal_item_link">
-                            <div class="sc_thumb ty_noresize">
-                                <div class="sc_tag_box">
-                                    <span class="sc_tag up"><span>UP</span></span>
-                                    <span class="sc_tag pay"><span>₩</span></span>
-                                </div>
-                                <div class="sc_thumb_img">
-                                    <img src="https://picsum.photos/200" alt="">
-                                </div>
-                            </div>
-                            <div class="txt_area">
-                                <div class="sc_counter ty1 ty_inside">
-                                    <span class="sc_counter_item sc_counter_view">5246</span>
-                                    <span class="sc_counter_item sc_counter_like">245</span>
-                                </div>
-                                <div class="sc_tit">
-                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
-                                </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="sc_gal_item masonry_item">
-                        <a href="" class="sc_gal_item_link">
-                            <div class="sc_thumb ty_noresize">
-
-                                <div class="sc_thumb_img">
-                                    <img src="https://picsum.photos/200/300" alt="">
-                                </div>
-                            </div>
-                            <div class="txt_area">
-                                <div class="sc_counter ty1 ty_inside">
-                                    <span class="sc_counter_item sc_counter_view">5246</span>
-                                    <span class="sc_counter_item sc_counter_like">245</span>
-                                </div>
-                                <div class="sc_tit">
-                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
-                                </div>
-                                <button class="sc_writer" onclick="location.href='https://designalen.tistory.com/22'; return false">
+                                <!--작가 작품 페이지 이동 버튼-->
+                                <button class="sc_writer" onclick="location.href=''; return false">
                                     <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
                                     <span class="sc_writer_name">작가이름노출</span>
                                 </button>
+                                <!--//작가 작품 페이지 이동 버튼-->
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sc_gal_item masonry_item">
+                        <a href="" class="sc_gal_item_link">
+                            <div class="sc_thumb ty_noresize">
+                                <div class="sc_tag_box">
+                                    <span class="sc_tag up"><span>UP</span></span>
+                                    <span class="sc_tag pay"><span>₩</span></span>
+                                </div>
+                                <div class="sc_thumb_img">
+                                    <img src="https://picsum.photos/200" alt="">
+                                </div>
+                            </div>
+                            <div class="txt_area">
+                                <div class="sc_counter ty1 ty_inside">
+                                    <span class="sc_counter_item sc_counter_view">5246</span>
+                                    <span class="sc_counter_item sc_counter_like">245</span>
+                                </div>
+                                <div class="sc_tit">
+                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
+                                </div>
+                                <!--작가 작품 페이지 이동 버튼-->
+                                <button class="sc_writer" onclick="location.href=''; return false">
+                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
+                                    <span class="sc_writer_name">작가이름노출</span>
+                                </button>
+                                <!--//작가 작품 페이지 이동 버튼-->
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sc_gal_item masonry_item">
+                        <a href="" class="sc_gal_item_link">
+                            <div class="sc_thumb ty_noresize">
+
+                                <div class="sc_thumb_img">
+                                    <img src="https://picsum.photos/200/300" alt="">
+                                </div>
+                            </div>
+                            <div class="txt_area">
+                                <div class="sc_counter ty1 ty_inside">
+                                    <span class="sc_counter_item sc_counter_view">5246</span>
+                                    <span class="sc_counter_item sc_counter_like">245</span>
+                                </div>
+                                <div class="sc_tit">
+                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
+                                </div>
+                                <!--작가 작품 페이지 이동 버튼-->
+                                <button class="sc_writer" onclick="location.href=''; return false">
+                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
+                                    <span class="sc_writer_name">작가이름노출</span>
+                                </button>
+                                <!--//작가 작품 페이지 이동 버튼-->
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sc_gal_item masonry_item">
+                        <a href="" class="sc_gal_item_link">
+                            <div class="sc_thumb ty_noresize">
+                                <div class="sc_tag_box">
+                                    <span class="sc_tag up"><span>UP</span></span>
+                                    <span class="sc_tag pay"><span>₩</span></span>
+                                </div>
+                                <div class="sc_thumb_img">
+                                    <img src="https://picsum.photos/200" alt="">
+                                </div>
+                            </div>
+                            <div class="txt_area">
+                                <div class="sc_counter ty1 ty_inside">
+                                    <span class="sc_counter_item sc_counter_view">5246</span>
+                                    <span class="sc_counter_item sc_counter_like">245</span>
+                                </div>
+                                <div class="sc_tit">
+                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
+                                </div>
+                                <!--작가 작품 페이지 이동 버튼-->
+                                <button class="sc_writer" onclick="location.href=''; return false">
+                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
+                                    <span class="sc_writer_name">작가이름노출</span>
+                                </button>
+                                <!--//작가 작품 페이지 이동 버튼-->
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sc_gal_item masonry_item">
+                        <a href="" class="sc_gal_item_link">
+                            <div class="sc_thumb ty_noresize">
+
+                                <div class="sc_thumb_img">
+                                    <img src="https://picsum.photos/200/300" alt="">
+                                </div>
+                            </div>
+                            <div class="txt_area">
+                                <div class="sc_counter ty1 ty_inside">
+                                    <span class="sc_counter_item sc_counter_view">5246</span>
+                                    <span class="sc_counter_item sc_counter_like">245</span>
+                                </div>
+                                <div class="sc_tit">
+                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
+                                </div>
+                                <!--작가 작품 페이지 이동 버튼-->
+                                <button class="sc_writer" onclick="location.href=''; return false">
+                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
+                                    <span class="sc_writer_name">작가이름노출</span>
+                                </button>
+                                <!--//작가 작품 페이지 이동 버튼-->
                             </div>
                         </a>
                     </li>

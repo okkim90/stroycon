@@ -124,23 +124,10 @@
                     color: #424242;
                     background-color: #fff;
                     border-radius: 6px;
+                    width: auto;
                     span {
-                        display: block;
-                        padding-right: 16px;
-                        position: relative;
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            width: 7px;
-                            height: 12px;
-                            right: 0;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            background-image: url(../images/ico/ico_arrow_l.svg);
-                            background-repeat: no-repeat;
-                            background-position: center center;
-
-                        }
+                        width: auto;
+                        padding-right: 12px;
                     }
                 }
             }
