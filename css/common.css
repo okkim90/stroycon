@@ -131,11 +131,11 @@ body.white { background-color: transparent; }
 
 .btn_more { display: inline-block; vertical-align: top; width: 80px; -ms-flex-negative: 0; flex-shrink: 0; padding: 0 12px 0 15px; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #fff; height: 30px; border-radius: 15px; -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1); }
 
-.btn_more span { position: relative; display: block; width: 100%; line-height: 30px; font-size: 14px; background-image: url(/images/ico/arrow_more.svg); background-repeat: no-repeat; background-position: right 55%; }
+.btn_more span { position: relative; display: block; width: 100%; line-height: 30px; font-size: 14px; background-image: url(../images/ico/arrow_more.svg); background-repeat: no-repeat; background-position: right 55%; }
 
 .btn_more2 { display: inline-block; vertical-align: top; -ms-flex-negative: 0; flex-shrink: 0; padding: 0 12px 0 13px; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #fff; height: 30px; border-radius: 15px; border: 1px solid #ccc; }
 
-.btn_more2 span { position: relative; display: block; width: 100%; padding-right: 12px; -webkit-box-sizing: border-box; box-sizing: border-box; line-height: 28px; font-size: 13px; letter-spacing: -0.4px; background-image: url(/images/ico/arrow_more.svg); background-repeat: no-repeat; background-position: right 55%; }
+.btn_more2 span { position: relative; display: block; width: 100%; padding-right: 12px; -webkit-box-sizing: border-box; box-sizing: border-box; line-height: 28px; font-size: 13px; letter-spacing: -0.4px; background-image: url(../images/ico/arrow_more.svg); background-repeat: no-repeat; background-position: right 55%; }
 
 .sc_user { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-width: 0; }
 
