@@ -3,6 +3,10 @@ body { overscroll-behavior-y: contain; }
 
 .nov_view { height: 100%; background-color: #fafafa; }
 
+.nov_view.ty_webtoon { background-color: #fff; text-align: center; }
+
+.nov_view.ty_webtoon img { max-width: 100%; }
+
 .step { display: none; position: relative; z-index: 99; }
 
 .step.on { display: block; }

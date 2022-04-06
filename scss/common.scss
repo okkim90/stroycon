@@ -527,13 +527,13 @@ body.white {
 .top_writer_info {
     padding: 30px 20px 0;
     background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
     .sc_user2 {
         padding-bottom: 10px;
     }
 }
 .sc_tab {
     display: flex;
-    border-bottom: 1px solid #e5e5e5;
     &_item {
         flex: 1;
     }

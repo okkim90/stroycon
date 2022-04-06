@@ -12,6 +12,13 @@ body {
 .nov_view {
     height: 100%;
     background-color: #fafafa;
+    &.ty_webtoon {
+        background-color: #fff;
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
 }
 
 .step {
@@ -728,7 +735,7 @@ body {
             overflow: hidden;
             position: relative;
             box-sizing: border-box;
-            
+
             &::after {
                 content: '';
                 display: none;
