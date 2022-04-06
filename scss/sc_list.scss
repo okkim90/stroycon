@@ -686,7 +686,26 @@
     }
 }
 
-
+.user_list {
+    &_item {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:first-child {
+            padding-top: 0;
+        }
+        & + & {
+            border-top: 1px solid #e5e5e5;
+        }
+        .shrk0 {
+            flex-shrink: 0;
+        }
+        .btn_more2 {
+            margin-left: 10px;
+        }
+    }
+}
 
 @media (max-width: 1023px) {
     .sc_list2 {
@@ -711,7 +730,7 @@
         }
     }
     .sc_gal.ty_masonry {
-      
+
         .sc_gal_item {
             width: calc(100%/3);
         }

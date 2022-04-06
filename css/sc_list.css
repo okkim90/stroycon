@@ -232,6 +232,16 @@
 
 .sc_gal.ty_masonry .sc_gal_item { width: 25%; padding: 0 10px; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 30px; }
 
+.user_list_item { padding: 20px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.user_list_item:first-child { padding-top: 0; }
+
+.user_list_item + .user_list_item { border-top: 1px solid #e5e5e5; }
+
+.user_list_item .shrk0 { -ms-flex-negative: 0; flex-shrink: 0; }
+
+.user_list_item .btn_more2 { margin-left: 10px; }
+
 @media (max-width: 1023px) { .sc_list2.ty_best .sc_list2_item { width: calc(100%/2); }
   .sc_gal.ty_best { white-space: nowrap; overflow-x: auto; padding-bottom: 10px; }
   .sc_gal.ty_best .sc_gal_item + .sc_gal_item { margin-left: 20px; }
