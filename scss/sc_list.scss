@@ -112,6 +112,7 @@
 }
 
 //반응형 리스트
+
 .scList {
     font-size: 0;
     &_link {
@@ -145,6 +146,18 @@
             }
             .sc_writer {
                 margin-top: 4px;
+            }
+            .sc_kw_wrap {
+                width: 100%;
+                margin-top: 8px;
+                height: 14px;
+                overflow: hidden;
+                .sc_kw {
+                    margin-top: 0;
+                    &_item {
+                        margin-top: 0;
+                    }
+                }
             }
             .info_txt {
                 width: 100%;
@@ -230,6 +243,17 @@
             margin-top: 37px;
             padding: 0 15px;
         }
+        &.ty_sub {
+            margin: 0;
+            .scList_item {
+                width: 100%;
+                padding: 0;
+                margin-top: 0;
+                & + .scList_item {
+                    margin-top: 37px;
+                }
+            }
+        }
     }
     &.ty_best_sub3 {
         margin: 0 -15px;
@@ -253,6 +277,10 @@
             vertical-align: top;
             width: calc(100%/#{$i});
         }
+    }
+
+    &_wrap {
+        padding: 40px 20px 40px;
     }
 }
 @media (max-width:1023px) {
@@ -391,6 +419,12 @@
         &.ty_best_sub2 {
             margin: 0;
             margin-top: 0;
+
+            &.ty_sub {
+                .scList_item + .scList_item {
+                    margin-top: 20px;
+                }
+            }
             .scList_item {
                 display: block;
                 width: 100%;
@@ -417,7 +451,7 @@
                 }
                 .sc_writer {
                    order: 1;
-                   margin-top: 10px;
+                   margin-top: 7px;
                    margin-right: 10px;
                    &_name {
                        max-width: 70px;
@@ -429,11 +463,14 @@
                 }
                 .sc_counter {
                     order: 2;
-                    margin-top: 10px;
+                    margin-top: 8px;
 
                     &_item {
                         line-height: 18px;
                     }
+                }
+                .sc_kw_wrap {
+                    margin-top: 4px;
                 }
                 .info_txt {
                     font-size: 12px;
@@ -522,6 +559,9 @@
 
                 }
             }
+        }
+        &_wrap {
+            padding: 20px;
         }
     }
 }
@@ -677,11 +717,15 @@
             opacity: 1;
             top: 0;
         }
+
         .sc_gal_item {
             width: 25%;
             padding: 0 10px;
             box-sizing: border-box;
             margin-top: 30px;
+            @at-root .sub_inner & {
+                width: calc(100%/3);
+            }
         }
     }
 }
@@ -904,6 +948,9 @@
         margin: 0 -5px;
         margin-top: -22px;
         .sc_gal_item {
+            @at-root .sub_inner & {
+                width: 50%;
+            }
             width: 50%;
         }
     }
