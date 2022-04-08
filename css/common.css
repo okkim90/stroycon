@@ -375,7 +375,7 @@ body.white { background-color: transparent; }
 
 .sub_header .setting_set .btn_setting { width: 40px; height: 40px; background: url(../images/ico/ico_setting.svg) no-repeat center center; }
 
-.sub_header .setting_set .setting_box { display: none; position: absolute; right: 6px; top: 100%; border-radius: 6px; background-color: #fff; }
+.sub_header .setting_set .setting_box { display: none; position: absolute; right: 6px; top: 100%; border-radius: 6px; background-color: #fff; -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
 
 .sub_header .setting_set .setting_box.on { display: block; }
 
@@ -384,6 +384,8 @@ body.white { background-color: transparent; }
 .sub_header .setting_set .setting_box li + li { border-top: 1px solid #f5f5f5; }
 
 .sub_header .setting_set .setting_box a { display: block; padding: 0 17px; white-space: nowrap; text-align: center; line-height: 36px; font-size: 13px; font-weight: 500; color: #343434; }
+
+.sub_header .setting_set .setting_box a:hover { background-color: rgba(0, 0, 0, 0.03); }
 
 .sub_header .util { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -495,11 +497,13 @@ body.white { background-color: transparent; }
 
 .sc_writer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.sc_writer_thumb { width: 18px; height: 18px; -ms-flex-negative: 0; flex-shrink: 0; }
+.sc_writer_thumb { width: 18px; height: 18px; -ms-flex-negative: 0; flex-shrink: 0; border-radius: 50%; overflow: hidden; }
 
 .sc_writer_thumb img { width: 100%; height: 100%; }
 
 .sc_writer_name { padding-left: 4px; min-width: 0; font-size: 12px; line-height: 1.42; letter-spacing: -0.12px; color: #424242; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+.sc_writer.ty_w .sc_writer_name { color: #fff; }
 
 .sc_thumb_rank { position: absolute; font-size: 45px; line-height: 1; font-family: Arial; letter-spacing: -0.45px; color: #5e25c7; text-shadow: 3px 3px 3px rgba(94, 37, 199, 0.2); right: 12px; top: -25px; z-index: 10; font-weight: 900; }
 

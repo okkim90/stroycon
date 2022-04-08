@@ -1173,6 +1173,7 @@ body.white {
             top: 100%;
             border-radius: 6px;
             background-color: #fff;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
             &.on {
                 display: block;
             }
@@ -1201,6 +1202,9 @@ body.white {
                 font-size: 13px;
                 font-weight: 500;
                 color: #343434;
+                &:hover {
+                    background-color: rgba(0,0,0,.03);
+                }
             }
         }
     }
@@ -1558,6 +1562,8 @@ body.white {
         width: 18px;
         height: 18px;
         flex-shrink: 0;
+        border-radius: 50%;
+        overflow: hidden;
         img {
             width: 100%;
             height: 100%;
@@ -1573,6 +1579,11 @@ body.white {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+    }
+    &.ty_w {
+        .sc_writer_name {
+            color: #fff;
+        }
     }
 }
 

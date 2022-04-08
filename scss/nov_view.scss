@@ -15,10 +15,32 @@ body {
     &.ty_webtoon {
         background-color: #fff;
         text-align: center;
+        height: 100vh;
+        box-sizing: border-box;
+        overflow-y: auto;
         img {
             max-width: 100%;
         }
+
     }
+    &.ty_gallery {
+        background-color: #fff;
+        padding: 70px 20px;
+        height: 100vh;
+        box-sizing: border-box;
+        overflow-y: auto;
+        img {
+            max-width: 100%;
+        }
+        .img_box ~ .txt_box {
+            padding-top: 30px;
+        }
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    &::-webkit-scrollbar { width: 6px; position: relative; z-index: 9999; }
+    &::-webkit-scrollbar-thumb { background-color: rgba(0, 0, 0, 0.4); border-radius: 10px; }
+    &::-webkit-scrollbar-track { background-color: rgba(0, 0, 0, 0.1); border-radius: 10px; }
 }
 
 .step {
@@ -217,8 +239,8 @@ body {
 
             }
         }
-        .ctrl_btns {
-
+        .sc_writer {
+            margin-left: 15px;
         }
     }
 
@@ -228,9 +250,15 @@ body {
         bottom: 0;
         .btn_comment {
             float: left;
-            width: 30px;
+            width: 40px;
             height: 40px;
             background: url(../images/ico/ico_reply.svg) no-repeat center center;
+        }
+        .btn_like {
+            float: left;
+            width: 40px;
+            height: 40px;
+            background: url(../images/ico/ico_heart2.svg) no-repeat center center;
         }
         .btn_epi {
             float: left;
