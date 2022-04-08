@@ -102,6 +102,12 @@
 
 .scList.ty_best_sub3 .rank_box { display: none; }
 
+.scList.ty_best_sub3.ty_sub { margin: 0; }
+
+.scList.ty_best_sub3.ty_sub .scList_item { width: 100%; padding: 0; margin-top: 0; }
+
+.scList.ty_best_sub3.ty_sub .scList_item + .scList_item { margin-top: 37px; }
+
 .scList.col2 .scList_item { display: inline-block; vertical-align: top; width: calc(100%/2); }
 
 .scList.col3 .scList_item { display: inline-block; vertical-align: top; width: calc(100%/3); }
@@ -157,6 +163,7 @@
   .scList.ty_best_sub2 .txt_box .sc_kw_wrap { margin-top: 4px; }
   .scList.ty_best_sub2 .txt_box .info_txt { font-size: 12px; line-height: 17px; white-space: nowrap; display: block; height: auto; margin-top: 4px; -webkit-line-clamp: unset; -webkit-box-orient: unset; }
   .scList.ty_best_sub3 { margin: 0; margin-top: 0; }
+  .scList.ty_best_sub3.ty_sub .scList_item + .scList_item { margin-top: 20px; }
   .scList.ty_best_sub3 .scList_item { display: block; width: 100%; width: calc(100%); margin-top: 0; padding: 0; }
   .scList.ty_best_sub3 .scList_item + .scList_item { margin-top: 20px; }
   .scList.ty_best_sub3 .sc_thumb_box { width: 60px; }

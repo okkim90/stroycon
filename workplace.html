@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/sc_list.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/list_page.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="./js/common.js"></script>
 </head>
@@ -37,10 +37,10 @@
             <div class="nav_area">
                 <nav id="nav" class="nav">
                     <ul class="nav_list">
-                        <li class="on"><a href=""><span>소설</span></a></li>
+                        <li><a href=""><span>소설</span></a></li>
                         <li><a href=""><span>웹툰</span></a></li>
                         <li><a href=""><span>갤러리</span></a></li>
-                        <li><a href=""><span>나의 작업실</span></a></li>
+                        <li  class="on"><a href=""><span>나의 작업실</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -49,39 +49,52 @@
             <div class="top_cate">
                 <ul class="top_cate_list">
                     <li class="top_cate_item">
-                        <a href="novel_webtoon_best.html" class="top_cate_link">BEST</a>
+                        <a href="workplace.html" class="top_cate_link on">나의 작품 관리</a>
                     </li>
                     <li class="top_cate_item">
-                        <a href="novel_webtoon_new.html" class="top_cate_link">신작 업데이트</a>
-                    </li>
-                    <li class="top_cate_item">
-                        <a href="novel_webtoon_keyword.html" class="top_cate_link on">키워드 작품</a>
+                        <a href="repository.html" class="top_cate_link">보관함</a>
                     </li>
                 </ul>
             </div>
-            <div class="inner">
-                <!-- if 키워드 작품 -->
-                <div class="top_sort_area">
-                    <div class="top_sort_sec">
-                        <ul class="tag_list taC">
-                            <li class="tag_list_item"><button class="tag_list_btn on">#전체</button></li>
-                            <li class="tag_list_item"><button class="tag_list_btn">#무협</button></li>
-                            <li class="tag_list_item"><button class="tag_list_btn">#판타지</button></li>
-                            <li class="tag_list_item"><button class="tag_list_btn">#퓨전</button></li>
-                            <li class="tag_list_item"><button class="tag_list_btn">#게임</button></li>
-                            <li class="tag_list_item"><button class="tag_list_btn">#SF</button></li>
-                            <li class="tag_list_item"><button class="tag_list_btn">#학원</button></li>
-                        </ul>
-                    </div>
-                    <div class="top_sort_sec sc_search_wrap taC">
-                        <div class="sc_search">
-                            <input type="text" class="sc_search_input" placeholder="작가명 작품명을 입력해 보세요.">
-                            <button type="button" class="sc_search_btn"><span class="blind">검색</span></button>
+            <div class="sub_inner ty_pd">
+                <div class="top_writer_info ty_nopd">
+                    <div class="sc_user2">
+                        <div class="thumb">
+                            <img src="./images/cha/cha5.png" alt="">
+                        </div>
+                        <div class="txt_box">
+                            <div class="sec">
+                                <strong class="name">선택한작가아이디</strong>
+                                <a href="" class="btn_my_edit"><span class="blind">정보 수정</span></a>
+                            </div>
+                            <div class="sec">
+                                <span class="sc_level lv1">
+                                    <span class="level_arrow"></span>
+                                    레벨 <b>1</b>
+                                </span>
+                            </div>
                         </div>
                     </div>
+                    <ul class="sc_tab">
+                        <li class="sc_tab_item">
+                            <a href="" class="sc_tab_link on">소설</a>
+                        </li>
+                        <li class="sc_tab_item">
+                            <a href="" class="sc_tab_link">웹툰</a>
+                        </li>
+                        <li class="sc_tab_item">
+                            <a href="" class="sc_tab_link">갤러리</a>
+                        </li>
+                    </ul>
                 </div>
-                <!--// if 키워드 작품 -->
-                <ul class="scList ty_best_sub3">
+                <div class="list_area_top ty2">
+                    <button class="btn_write2"><span>작품 등록하기</span></button>
+                    <div class="sort">
+                        <button type="button" class="btn_sort on">최신순</button>
+                        <button type="button" class="btn_sort">첫작품 부터</button>
+                    </div>
+                </div>
+                <ul class="scList ty_best_sub2 ty_sub">
                     <li class="scList_item">
                         <a href="" class="scList_link">
                             <div class="sc_thumb_box">
@@ -92,10 +105,6 @@
                                     </div>
                                     <div class="sc_thumb_img">
                                         <img src="./images/main/mp3.png" alt="">
-                                        <div class="sc_counter ty1">
-                                            <span class="sc_counter_item sc_counter_view">5246</span>
-                                            <span class="sc_counter_item sc_counter_like">245</span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -104,14 +113,21 @@
                                     <span class="sc_tag finish">완결</span>
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
+                                <div class="sc_kw_wrap">
+                                    <div class="sc_kw">
+                                        <span class="sc_kw_item">#판타지</span>
+                                        <span class="sc_kw_item">#키워드1</span>
+                                        <span class="sc_kw_item">#키워드2</span>
+                                        <span class="sc_kw_item">#키워드3</span>
+                                        <span class="sc_kw_item">#키워드4</span>
+                                    </div>
                                 </div>
+
                                 <p class="info_txt ellipsis2">작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 </p>
                                 <div class="sc_counter ty2">
                                     <span class="sc_counter_item sc_counter_view">5246</span>
                                     <span class="sc_counter_item sc_counter_like">245</span>
+                                    <span class="sc_counter_item sc_counter_star">2245</span>
                                 </div>
                             </div>
                         </a>
@@ -126,10 +142,6 @@
                                     </div>
                                     <div class="sc_thumb_img">
                                         <img src="./images/main/mp3.png" alt="">
-                                        <div class="sc_counter ty1">
-                                            <span class="sc_counter_item sc_counter_view">5246</span>
-                                            <span class="sc_counter_item sc_counter_like">245</span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -138,14 +150,21 @@
                                     <span class="sc_tag finish">완결</span>
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
+                                <div class="sc_kw_wrap">
+                                    <div class="sc_kw">
+                                        <span class="sc_kw_item">#판타지</span>
+                                        <span class="sc_kw_item">#키워드1</span>
+                                        <span class="sc_kw_item">#키워드2</span>
+                                        <span class="sc_kw_item">#키워드3</span>
+                                        <span class="sc_kw_item">#키워드4</span>
+                                    </div>
                                 </div>
+
                                 <p class="info_txt ellipsis2">작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 </p>
                                 <div class="sc_counter ty2">
                                     <span class="sc_counter_item sc_counter_view">5246</span>
                                     <span class="sc_counter_item sc_counter_like">245</span>
+                                    <span class="sc_counter_item sc_counter_star">2245</span>
                                 </div>
                             </div>
                         </a>
@@ -160,10 +179,6 @@
                                     </div>
                                     <div class="sc_thumb_img">
                                         <img src="./images/main/mp3.png" alt="">
-                                        <div class="sc_counter ty1">
-                                            <span class="sc_counter_item sc_counter_view">5246</span>
-                                            <span class="sc_counter_item sc_counter_like">245</span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -172,14 +187,21 @@
                                     <span class="sc_tag finish">완결</span>
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
+                                <div class="sc_kw_wrap">
+                                    <div class="sc_kw">
+                                        <span class="sc_kw_item">#판타지</span>
+                                        <span class="sc_kw_item">#키워드1</span>
+                                        <span class="sc_kw_item">#키워드2</span>
+                                        <span class="sc_kw_item">#키워드3</span>
+                                        <span class="sc_kw_item">#키워드4</span>
+                                    </div>
                                 </div>
+
                                 <p class="info_txt ellipsis2">작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 </p>
                                 <div class="sc_counter ty2">
                                     <span class="sc_counter_item sc_counter_view">5246</span>
                                     <span class="sc_counter_item sc_counter_like">245</span>
+                                    <span class="sc_counter_item sc_counter_star">2245</span>
                                 </div>
                             </div>
                         </a>
@@ -194,10 +216,6 @@
                                     </div>
                                     <div class="sc_thumb_img">
                                         <img src="./images/main/mp3.png" alt="">
-                                        <div class="sc_counter ty1">
-                                            <span class="sc_counter_item sc_counter_view">5246</span>
-                                            <span class="sc_counter_item sc_counter_like">245</span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -206,14 +224,21 @@
                                     <span class="sc_tag finish">완결</span>
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
+                                <div class="sc_kw_wrap">
+                                    <div class="sc_kw">
+                                        <span class="sc_kw_item">#판타지</span>
+                                        <span class="sc_kw_item">#키워드1</span>
+                                        <span class="sc_kw_item">#키워드2</span>
+                                        <span class="sc_kw_item">#키워드3</span>
+                                        <span class="sc_kw_item">#키워드4</span>
+                                    </div>
                                 </div>
+
                                 <p class="info_txt ellipsis2">작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 </p>
                                 <div class="sc_counter ty2">
                                     <span class="sc_counter_item sc_counter_view">5246</span>
                                     <span class="sc_counter_item sc_counter_like">245</span>
+                                    <span class="sc_counter_item sc_counter_star">2245</span>
                                 </div>
                             </div>
                         </a>
@@ -228,10 +253,6 @@
                                     </div>
                                     <div class="sc_thumb_img">
                                         <img src="./images/main/mp3.png" alt="">
-                                        <div class="sc_counter ty1">
-                                            <span class="sc_counter_item sc_counter_view">5246</span>
-                                            <span class="sc_counter_item sc_counter_like">245</span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -240,120 +261,26 @@
                                     <span class="sc_tag finish">완결</span>
                                     <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
                                 </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
+                                <div class="sc_kw_wrap">
+                                    <div class="sc_kw">
+                                        <span class="sc_kw_item">#판타지</span>
+                                        <span class="sc_kw_item">#키워드1</span>
+                                        <span class="sc_kw_item">#키워드2</span>
+                                        <span class="sc_kw_item">#키워드3</span>
+                                        <span class="sc_kw_item">#키워드4</span>
+                                    </div>
                                 </div>
+
                                 <p class="info_txt ellipsis2">작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 </p>
                                 <div class="sc_counter ty2">
                                     <span class="sc_counter_item sc_counter_view">5246</span>
                                     <span class="sc_counter_item sc_counter_like">245</span>
+                                    <span class="sc_counter_item sc_counter_star">2245</span>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="scList_item">
-                        <a href="" class="scList_link">
-                            <div class="sc_thumb_box">
-                                <div class="sc_thumb">
-                                    <div class="sc_tag_box">
-                                        <span class="sc_tag up"><span>UP</span></span>
-                                        <span class="sc_tag pay"><span>₩</span></span>
-                                    </div>
-                                    <div class="sc_thumb_img">
-                                        <img src="./images/main/mp3.png" alt="">
-                                        <div class="sc_counter ty1">
-                                            <span class="sc_counter_item sc_counter_view">5246</span>
-                                            <span class="sc_counter_item sc_counter_like">245</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="txt_box">
-                                <div class="sc_tit">
-                                    <span class="sc_tag finish">완결</span>
-                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
-                                </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
-                                </div>
-                                <p class="info_txt ellipsis2">작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 </p>
-                                <div class="sc_counter ty2">
-                                    <span class="sc_counter_item sc_counter_view">5246</span>
-                                    <span class="sc_counter_item sc_counter_like">245</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="scList_item">
-                        <a href="" class="scList_link">
-                            <div class="sc_thumb_box">
-                                <div class="sc_thumb">
-                                    <div class="sc_tag_box">
-                                        <span class="sc_tag up"><span>UP</span></span>
-                                        <span class="sc_tag pay"><span>₩</span></span>
-                                    </div>
-                                    <div class="sc_thumb_img">
-                                        <img src="./images/main/mp3.png" alt="">
-                                        <div class="sc_counter ty1">
-                                            <span class="sc_counter_item sc_counter_view">5246</span>
-                                            <span class="sc_counter_item sc_counter_like">245</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="txt_box">
-                                <div class="sc_tit">
-                                    <span class="sc_tag finish">완결</span>
-                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
-                                </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
-                                </div>
-                                <p class="info_txt ellipsis2">작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 </p>
-                                <div class="sc_counter ty2">
-                                    <span class="sc_counter_item sc_counter_view">5246</span>
-                                    <span class="sc_counter_item sc_counter_like">245</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="scList_item">
-                        <a href="" class="scList_link">
-                            <div class="sc_thumb_box">
-                                <div class="sc_thumb">
-                                    <div class="sc_tag_box">
-                                        <span class="sc_tag up"><span>UP</span></span>
-                                        <span class="sc_tag pay"><span>₩</span></span>
-                                    </div>
-                                    <div class="sc_thumb_img">
-                                        <img src="./images/main/mp3.png" alt="">
-                                        <div class="sc_counter ty1">
-                                            <span class="sc_counter_item sc_counter_view">5246</span>
-                                            <span class="sc_counter_item sc_counter_like">245</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="txt_box">
-                                <div class="sc_tit">
-                                    <span class="sc_tag finish">완결</span>
-                                    <h3 class="tit_txt ellipsis1">작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목 작품제목</h3>
-                                </div>
-                                <div class="sc_writer">
-                                    <span class="sc_writer_thumb"><img src="./images/cha/cha11.png" alt=""></span>
-                                    <span class="sc_writer_name">작가이름노출</span>
-                                </div>
-                                <p class="info_txt ellipsis2">작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 작품설명 </p>
-                                <div class="sc_counter ty2">
-                                    <span class="sc_counter_item sc_counter_view">5246</span>
-                                    <span class="sc_counter_item sc_counter_like">245</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
 
