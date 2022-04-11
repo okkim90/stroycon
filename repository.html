@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>스토리콘</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sc_list.css">
+    <link rel="stylesheet" href="./css/list_page.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+<body class="bg_w">
+    <div id="wrap" class="sub">
+        <header id="header" class="header">
+            <div class="header_top">
+                <div class="header_top_inner">
+                    <h1 class="logo">
+                        <a href=""><span class="blind">스토리콘</span></a>
+                    </h1>
+                    <div class="header_util">
+                        <a href="" class="btn_mypage"><span class="blind">마이페이지</span></a>
+                        <button type="button" class="btn_lm">
+                            <span class="blind">전체메뉴</span>
+                            <div class="bar_box">
+                                <span class="bar top"></span>
+                                <span class="bar mid"></span>
+                                <span class="bar bot"></span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_area">
+                <nav id="nav" class="nav">
+                    <ul class="nav_list">
+                        <li><a href=""><span>소설</span></a></li>
+                        <li><a href=""><span>웹툰</span></a></li>
+                        <li><a href=""><span>갤러리</span></a></li>
+                        <li  class="on"><a href=""><span>나의 작업실</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="container" class="sub no_mv">
+            <div class="top_cate">
+                <ul class="top_cate_list">
+                    <li class="top_cate_item">
+                        <a href="workplace.html" class="top_cate_link ">나의 작품 관리</a>
+                    </li>
+                    <li class="top_cate_item">
+                        <a href="repository.html" class="top_cate_link on">보관함</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub_inner ty_pd">
+                <div class="top_writer_info ty_nopd">
+                    <div class="sc_user2">
+                        <div class="thumb">
+                            <img src="./images/cha/cha5.png" alt="">
+                        </div>
+                        <div class="txt_box">
+                            <div class="sec">
+                                <strong class="name">선택한작가아이디</strong>
+                                <a href="" class="btn_my_edit"><span class="blind">정보 수정</span></a>
+                            </div>
+                            <div class="sec">
+                                <span class="sc_level lv1">
+                                    <span class="level_arrow"></span>
+                                    레벨 <b>1</b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="sc_tab">
+                        <li class="sc_tab_item">
+                            <a href="" class="sc_tab_link on">좋아요</a>
+                        </li>
+                        <li class="sc_tab_item">
+                            <a href="" class="sc_tab_link">구독</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="common_list mt10">
+                    <!--
+                        [DEV]
+                        구독 리스트 & 좋아요 리스트 같은 형태
+                        아이콘만 다름
+
+                        <button class="sc_i ty_heart"><div class="blind">좋아요 해제</div></button>
+
+                        <button class="sc_i ty_star"><div class="blind">구독 해제</div></button>
+                    -->
+
+                    <li class="common_list_item">
+                        <a href="" class="common_list_link">
+                            <span class="sc_tag ty_txt">소설</span>
+                            <span class="tit ellipsis1">작품 제목은 한줄까지 노출됩니다. 작품 제목은 한줄까지 노출됩니다.</span>
+                            <button class="sc_i ty_heart"><div class="blind">좋아요 해제</div></button>
+                        </a>
+                    </li>
+                    <li class="common_list_item">
+                        <a href="" class="common_list_link">
+                            <span class="sc_tag ty_txt">웹툰</span>
+                            <span class="tit ellipsis1">작품 제목은 한줄까지 노출됩니다. 작품 제목은 한줄까지 노출됩니다.</span>
+                            <button class="sc_i ty_heart"><div class="blind">좋아요 해제</div></button>
+                        </a>
+                    </li>
+                    <li class="common_list_item">
+                        <a href="" class="common_list_link">
+                            <span class="sc_tag ty_txt">갤러리</span>
+                            <span class="tit ellipsis1">작품 제목은 한줄까지 노출됩니다. 작품 제목은 한줄까지 노출됩니다.</span>
+                            <button class="sc_i ty_heart"><div class="blind">좋아요 해제</div></button>
+                        </a>
+                    </li>
+                    <li class="common_list_item">
+                        <a href="" class="common_list_link">
+                            <span class="sc_tag ty_txt">갤러리</span>
+                            <span class="tit ellipsis1">작품 제목은 한줄까지 노출됩니다. 작품 제목은 한줄까지 노출됩니다.</span>
+                            <button class="sc_i ty_heart"><div class="blind">좋아요 해제</div></button>
+                        </a>
+                    </li>
+                    <li class="common_list_item">
+                        <a href="" class="common_list_link">
+                            <span class="sc_tag ty_txt">갤러리</span>
+                            <span class="tit ellipsis1">작품 제목은 한줄까지 노출됩니다. 작품 제목은 한줄까지 노출됩니다.</span>
+                            <button class="sc_i ty_star"><div class="blind">구독 해제</div></button>
+                        </a>
+                    </li>
+                    <li class="common_list_item">
+                        <a href="" class="common_list_link">
+                            <span class="sc_tag ty_txt">소설</span>
+                            <span class="tit ellipsis1">작품 제목은 한줄까지 노출됩니다. 작품 제목은 한줄까지 노출됩니다.</span>
+                            <button class="sc_i ty_star"><div class="blind">구독 해제</div></button>
+                        </a>
+                    </li>
+                    <li class="common_list_item">
+                        <a href="" class="common_list_link">
+                            <span class="sc_tag ty_txt">갤러리</span>
+                            <span class="tit ellipsis1">작품 제목은 한줄까지 노출됩니다. 작품 제목은 한줄까지 노출됩니다.</span>
+                            <button class="sc_i ty_star"><div class="blind">구독 해제</div></button>
+                        </a>
+                    </li>
+                    <li class="common_list_item">
+                        <a href="" class="common_list_link">
+                            <span class="sc_tag ty_txt">소설</span>
+                            <span class="tit ellipsis1">작품 제목은 한줄까지 노출됩니다. 작품 제목은 한줄까지 노출됩니다.</span>
+                            <button class="sc_i ty_star"><div class="blind">구독 해제</div></button>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <footer id="footer" class="footer">
+            <ul class="footer_menu">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">광고안내</a></li>
+                <li><a href="">개인정보취급방침</a></li>
+            </ul>
+            <div class="footer_policy">
+                <h2 class="footer_policy_tit">
+                    <button type="button" class="btn_policy">㈜동아사이언스 키즈 플랫폼 <i></i></button>
+                </h2>
+                <div class="txt_box">
+                    개인정보관리책임자 : <span>김수희 (privacy@dongascience.com) |</span> <span>청소년보호책임자 : 조기견</span> <br><br>
+                    서울시 용산구 청파로 109, 7층 (04370) | 문의 : 02-6749-2000 ｜팩스 : 02-3148-0789  사업자등록번호 : 101-81-62201 (사업자정보확인) | 통신판매업신고번호 : 제2013-서울용산-01101호 | 온라인 결제를 위한 PG사의 구매안전서비스(가입사실 확인)
+                </div>
+            </div>
+            <p class="copy">Copyright © Dongascience. All right reserved.</p>
+        </footer>
+    </div>
+
+
+    <script src="./js/masonry.pkgd.min.js"></script>
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
+</body>
+</html>

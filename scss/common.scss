@@ -697,6 +697,7 @@ body.bg_w {
     }
 }
 
+
 .layer_popup {
     display: none;
     position: fixed;
@@ -1505,6 +1506,16 @@ body.bg_w {
             transform-origin: center center;
         }
 
+    }
+    &.ty_txt {
+        border: solid 1px rgba(94, 37, 199, 0.3);
+        border-radius: 3px;
+        height: 16px;
+        line-height: 13px;
+        font-size: 11px;
+        color: #5e25c7;
+        padding: 0 5px;
+        box-sizing: border-box;
     }
 }
 

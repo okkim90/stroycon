@@ -483,6 +483,8 @@ body.bg_w { background-color: transparent; }
 
 .sc_tag.re span { display: block; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transform-origin: center center; transform-origin: center center; }
 
+.sc_tag.ty_txt { border: solid 1px rgba(94, 37, 199, 0.3); border-radius: 3px; height: 16px; line-height: 13px; font-size: 11px; color: #5e25c7; padding: 0 5px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
 .sc_counter.ty1 { padding: 0 10px 0 5px; position: absolute; left: 0; bottom: 0; margin-left: -4px; background-color: rgba(0, 0, 0, 0.3); border-radius: 0 8px 8px 0; }
 
 .sc_counter.ty1 .sc_counter_item { display: inline-block; vertical-align: top; padding-left: 12px; position: relative; font-size: 11px; line-height: 17px; background-repeat: no-repeat; background-position: 0 center; color: #fff; margin-left: 4px; }

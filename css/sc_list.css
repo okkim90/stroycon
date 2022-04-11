@@ -292,6 +292,22 @@
 
 .user_list_item .btn_more2 { margin-left: 10px; }
 
+.common_list.mt10 { margin-top: 10px; }
+
+.common_list_item { border-bottom: 1px solid #f5f5f5; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.common_list_link { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; min-width: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; line-height: 40px; }
+
+.common_list_link .sc_tag { margin-right: 4px; }
+
+.common_list_link .tit { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; min-width: 0; font-size: 13px; }
+
+.common_list .sc_i { -ms-flex-negative: 0; flex-shrink: 0; width: 40px; height: 40px; }
+
+.common_list .sc_i.ty_heart { background: url(../images/ico/sc_ico_heart_fill.svg) no-repeat center center; }
+
+.common_list .sc_i.ty_star { background: url(../images/ico/sc_ico_star_fill.svg) no-repeat center center; }
+
 @media (max-width: 1023px) { .sc_list2.ty_best .sc_list2_item { width: calc(100%/2); }
   .sc_gal.ty_best { white-space: nowrap; overflow-x: auto; padding-bottom: 10px; }
   .sc_gal.ty_best .sc_gal_item + .sc_gal_item { margin-left: 20px; }

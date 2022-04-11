@@ -845,6 +845,43 @@
     }
 }
 
+.common_list {
+    &.mt10 {
+        margin-top: 10px;
+    }
+    &_item {
+        border-bottom: 1px solid #f5f5f5;
+        position: relative;
+        display: flex;
+    }
+    &_link {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        line-height: 40px;
+        .sc_tag {
+            margin-right: 4px;
+        }
+        .tit {
+            flex: 1;
+            min-width: 0;
+            font-size: 13px;
+        }
+    }
+    .sc_i {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        &.ty_heart {
+            background: url(../images/ico/sc_ico_heart_fill.svg) no-repeat center center;
+        }
+        &.ty_star {
+            background: url(../images/ico/sc_ico_star_fill.svg) no-repeat center center;
+        }
+    }
+}
+
 @media (max-width: 1023px) {
     .sc_list2 {
         &.ty_best {
