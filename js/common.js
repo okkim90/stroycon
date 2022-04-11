@@ -37,10 +37,63 @@ $(function(){
     });
 
 
+
+    $('.byteLimit').on('keyup', function(){
+        var thisObject = $(this);
+        var limit = thisObject.attr("limitbyte"); //제한byte를 가져온다.
+        var str = thisObject.val();
+        var strLength = 0;
+        var strTitle = "";
+        var strPiece = "";
+        var check = false;
+
+        if(str){
+            for (i = 0; i < str.length; i++){
+                var code = str.charCodeAt(i);
+                var ch = str.substr(i,1).toUpperCase();
+                //체크 하는 문자를 저장
+                strPiece = str.substr(i,1)
+
+                code = parseInt(code);
+
+                if ((ch < "0" || ch > "9") && (ch < "A" || ch > "Z") && ((code > 255) || (code < 0))){
+                    strLength = strLength + 3; //UTF-8 3byte 로 계산
+                }else{
+                    strLength = strLength + 1;
+                }
+
+                if(strLength>limit){ //제한 길이 확인
+                    check = true;
+                    break;
+                }else{
+                    strTitle = strTitle+strPiece; //제한길이 보다 작으면 자른 문자를 붙여준다.
+                }
+                    $(this).siblings('.byte_out').html(
+                        '<span class="fc_purple">'+strLength+'</span> / '+limit+'byte'
+                    );
+                }
+
+            }else{
+                $(this).siblings('.byte_out').html(
+                    '<span class="fc_purple">0</span> / '+limit+'byte'
+                );
+            }
+
+
+
+        if(check){
+            alert("최대 "+limit+"byte 까지 입력 가능합니다.");
+        }
+        thisObject.val(strTitle);
+
+    });
+
+
 });
 
 function winH(){
     $('.wihH').outerHeight($(window).height());
+    $('.minWihH').css({'min-height':$(window).height() - 130});
 }
 
 function filebox(target){
@@ -80,3 +133,14 @@ function close_li_edit(target){
     $li_edit_box.removeClass('on');
 
 }
+
+function edit_name(target){
+    var $this = $(target);
+    $('.name_set').removeClass('on');
+    if($this.is(":checked")){
+        $('.name_set.ty_nickname').addClass('on');
+    }else{
+        $('.name_set.ty_name').addClass('on');
+    }
+}
+

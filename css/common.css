@@ -10,6 +10,10 @@ body.bg_w { background-color: transparent; }
 
 #container.sub.no_mv { padding-top: 180px; }
 
+.fc_purple { color: #5e25c7; }
+
+.fc_lgrey { color: #999; }
+
 .header { background-color: #fff; padding-bottom: 10px; position: absolute; z-index: 9999; width: 100%; min-width: 1240px; left: 0; top: 0; }
 
 .main .header { background-color: transparent; }
@@ -102,12 +106,18 @@ body.bg_w { background-color: transparent; }
 
 .container_ty2 { padding-top: 40px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+.container_ty3 { padding-top: 40px; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: calc(100vh - 130px); background-color: #fff; }
+
 /* btns */
+.btn_area { font-size: 0; }
+
 .btn_area.ty_bot { margin-top: 30px; }
 
 .btn_area.taC { text-align: center; }
 
 .btn_area.taR { text-align: right; }
+
+.btn_area [class^=btn] { margin: 0 5px; }
 
 .btn_small { display: inline-block; vertical-align: top; height: 24px; line-height: 22px; padding: 0 5px; border-radius: 6px; font-size: 12px; font-weight: 400; border-style: solid; border-width: 1px; }
 
@@ -168,6 +178,40 @@ body.bg_w { background-color: transparent; }
 .sc_user2 .btn_my_edit { display: inline-block; vertical-align: top; height: 21px; width: 21px; background: url(../images/ico/ico_setting_c.svg) no-repeat center center; }
 
 .sc_user2 .sec + .sec { margin-top: 4px; }
+
+.sc_user3 { padding: 40px 20px; background-color: #fff; }
+
+.sc_user3 .thumb { width: 100px; height: 100px; margin: 0 auto; border-radius: 50%; overflow: hidden; background-color: rgba(119, 0, 255, 0.07); background-image: url(../images/ico/ico_empty_p.svg); background-repeat: no-repeat; background-position: center center; background-size: 47px; }
+
+.sc_user3 .thumb img { width: 100%; height: 100%; }
+
+.sc_user3 .name_set { margin-top: 10px; display: none; text-align: center; }
+
+.sc_user3 .name_set.on { display: block; }
+
+.sc_user3 .name_set.ty_name { text-align: center; }
+
+.sc_user3 .name_set .name { display: block; font-size: 18px; line-height: 21px; font-weight: bold; color: #212121; }
+
+.sc_user3 .name_set .txt_area { margin-top: 20px; }
+
+.sc_user3 .name_set .txt_status { font-size: 13px; line-height: 16px; }
+
+.sc_user3 .name_set .txt_tip { font-size: 11px; line-height: 1.45; margin-top: 10px; }
+
+.sc_user3 .name_set .name_set_top { text-align: center; position: relative; }
+
+.sc_user3 .name_set .name_set_top .chk_overlap { width: 64px; height: 24px; line-height: 22px; border: 1px solid rgba(94, 37, 199, 0.5); -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 6px; color: #5e25c7; text-align: center; display: block; margin: 0 auto; margin-top: 15px; }
+
+.sc_user3 .name_set .input_name_set { display: inline-block; text-align: center; position: relative; }
+
+.sc_user3 .name_set .input_name_set .name { text-align: center; width: 160px; border: none; border-bottom: 1px solid rgba(94, 37, 199, 0.2); height: 30px; outline: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.sc_user3 .name_set .input_name_set .ico_input { position: absolute; width: 20px; height: 20px; right: -24px; top: 4px; background-image: url(../images/ico/ico_edit2.svg); background-repeat: no-repeat; background-position: center center; }
+
+.sc_user3 .name_set .input_name_set .byte_out { display: block; font-size: 10px; color: #999; line-height: 12px; margin-top: 5px; }
+
+.sc_user3 .name_set .caution_list { margin-top: 20px; display: inline-block; vertical-align: top; text-align: left; }
 
 .top_writer_info { padding: 30px 20px 0; background-color: #fff; border-bottom: 1px solid #e5e5e5; }
 
@@ -444,6 +488,8 @@ body.bg_w { background-color: transparent; }
 .sub_header.ty_w .tit { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-size: 16px; line-height: 40px; font-weight: normal; }
 
 .sub_header.ty_w .btn_back { position: absolute; left: 0; top: 0; background: url("../images/ico/arrow_l_b.svg") no-repeat center center; }
+
+.sub_header .chk_toggle_set { position: absolute; right: 20px; top: 50%; margin-top: -12px; }
 
 .sc_tit h1, .sc_tit h2, .sc_tit h3, .sc_tit h4 { font-weight: 500; }
 
