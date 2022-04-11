@@ -805,6 +805,7 @@ body.bg_w {
         }
     }
     &_btn {
+        display: block;
         border: solid 1px rgba(0, 0, 0, 0.07);
         border-radius: 12px;
         padding: 0 10px;
@@ -817,8 +818,18 @@ body.bg_w {
             color: #5e25c7;
             font-weight: 500;
         }
-
     }
+    .hidden_input {
+        opacity: 0;
+        position: absolute;
+        z-index: -999;
+    }
+    .tag_checkbox:checked ~ &_btn {
+        border: solid 1px rgba(94, 37, 199, 0.5);
+        color: #5e25c7;
+        font-weight: 500;
+    }
+
 }
 
 
@@ -827,6 +838,7 @@ body.bg_w {
     position: fixed;
 
     z-index: 9999;
+
     &.on {
         display: block;
     }
@@ -987,7 +999,71 @@ body.bg_w {
 
     }
 
+    &.ty2 {
+        background-color: rgba(0,0,0,.5);
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .layer_cautions {
+        position: absolute;
+        max-width: 740px;
+        border-radius: 20px 20px 0 0;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 100%;
+        padding: 40px 35px;
+        box-sizing: border-box;
+        background-color: #fff;
+        .layer_cautions_tit {
+            font-size: 24px;
+            line-height: 1.25;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        .caution_list2 {
+            li {
+                & + li {
+                    margin-top: 20px;
+                }
+                display: flex;
+                align-items: center;
+                .thumb {
+                    flex-shrink: 0;
+                    width: 90px;
+                    height: 90px;
+                    background-color: rgba(94, 37, 199, 0.07);
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .txt_box {
+                    padding-left: 10px;
+                    .tit {
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        font-size: 13px;
+                        line-height: 1.38;
+                        color: #424242;
+                        font-family: 'Noto Sans KR';
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
 }
+
+
 .tab_set {
     .tab_btns {
         display: flex;
@@ -1506,6 +1582,11 @@ body.bg_w {
             top: 0;
             background: url('../images/ico/arrow_l_b.svg') no-repeat center center;
         }
+        .btn_save {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     }
     .chk_toggle_set {
         position: absolute;
@@ -1769,6 +1850,70 @@ body.bg_w {
     font-weight: 900;
 }
 
+
+.input {
+    &_ty1 {
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        padding: 0 10px;
+        color: #424242;
+    }
+}
+.ta {
+    &_ty1 {
+        width: 100%;
+        height: 120px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        color: #424242;
+    }
+}
+
+.write_intro_wrap {
+    padding: 30px 20px;
+    .write_intro_sec {
+        & + .write_intro_sec {
+            margin-top: 30px;
+        }
+        &_tit {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            h2 {
+                font-size: 14px;
+                color: #212121;
+                line-height: 17px;
+            }
+            .sub_txt {
+                width: 100%;
+                color: #666;
+                font-size: 11px;
+                line-height: 13px;
+                margin-top: 6px;
+            }
+            .btn_chk {
+                font-size: 11px;
+                line-height: 17px;
+                letter-spacing: -0.33px;
+                color: #666;
+            }
+        }
+    }
+
+    .write_intro_top {
+        .write_intro_ta {
+            margin-top: 10px;
+        }
+    }
+
+}
 
 
 

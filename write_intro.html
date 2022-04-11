@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>스토리콘</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/list_page.css">
+    <link rel="stylesheet" href="./css/sc_list.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+<body>
+    <div id="wrap" class="sub list_page ">
+        <div id="container">
+            <div class="sub_inner container_ty3 minWihH">
+                <div class="sub_header ty_w">
+                    <h1 class="tit">작품 등록하기</h1>
+                    <a href="" class="btn_back"><span class="blind">이전</span></a>
+                    <button type="button" class="btn_save"><span class="blind">저장하기</span></button>
+                </div>
+                <div class="write_intro_wrap">
+                    <div class="write_intro_sec write_intro_top">
+                        <input type="text" class="write_intro_tit input_ty1" placeholder="작품 제목을 입력하세요.">
+                        <textarea name="" id="" class="write_intro_ta ta_ty1" placeholder="내용을 입력하세요."></textarea>
+                    </div>
+                    <div class="write_intro_sec upload_bg_area">
+                        <div class="write_intro_sec_tit">
+                            <h2>표지</h2>
+                            <label class="btn_chk"><input type="checkbox"> 기본 표지 이미지 사용</label>
+                        </div>
+                        <div class="file_box">
+                            <input type="text" value="" placeholder="이미지를 선택해주세요" class="file_box_txt" readonly="">
+                            <input type="file" id="upload_bg" class="input_file" accept="image/jpg, image/png, image/gif, image/jpeg" onchange="filebox(this);">
+                            <label for="upload_bg" class="btn_search"></label>
+                        </div>
+                        <ul class="caution_list ty_bot">
+                            <li>740px X 740px 크기의 사진을 업로드 해주세요.</li>
+                            <li>이미지 최대 10MB 까지 첨부</li>
+                            <li>확장자가 jpg, png, gif, jpeg 인 이미지만 업로드 가능합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="write_intro_sec">
+                        <div class="write_intro_sec_tit">
+                            <h2>키워드</h2>
+                            <p class="sub_txt">키워드는 최대 3개까지 선택할 수 있습니다.</p>
+
+                        </div>
+                        <ul class="tag_list">
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#전체</span>
+                                </label>
+                            </li>
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#무협</span>
+                                </label>
+                            </li>
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#판타지</span>
+                                </label>
+                            </li>
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#SF</span>
+                                </label>
+                            </li>
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#연애</span>
+                                </label>
+                            </li>
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#학원</span>
+                                </label>
+                            </li>
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#스포츠</span>
+                                </label>
+                            </li>
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#게임</span>
+                                </label>
+                            </li>
+                            <li class="tag_list_item">
+                                <label>
+                                    <input type="checkbox" class="tag_checkbox hidden_input">
+                                    <span class="tag_list_btn">#자유장르</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <script>
+                            $('.tag_checkbox').on('change',function(){
+                                var $length = $('.tag_checkbox:checked').length;
+
+                                if($length > 3){
+                                    alert('최대 3개까지 선택 가능합니다.');
+                                    $(this).prop('checked',false);
+                                }
+                            });
+                        </script>
+                    </div>
+                    <div class="btn_area ty_bot taC">
+                        <button id="btn_upload_bg" class="btn_mid btn_upload" onclick="add_bg(this)">등록</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="layer_popup ty2 on">
+            <div class="layer_cautions ff_godoB">
+                <h2 class="layer_cautions_tit ff_godoB fc_purple">우리 모두 약속해요!</h2>
+                <ul class="caution_list2">
+                    <li>
+                        <div class="thumb"><img src="./images/cha/cha3.png" alt=""></div>
+                        <div class="txt_box">
+                            <h3 class="tit">불법 도용 금지!</h3>
+                            <p>작품에 사용되는 모든 이미지와 글은 저작권에 문제되지 않는 창작물로 업로드 해주세요.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb"></div>
+                        <div class="txt_box">
+                            <h3 class="tit">높은 수위의 내용</h3>
+                            <p>이 곳은 다양한 친구들이 참여하는 공간입니다. 폭력적인 내용 및 성적인 묘사는 삼가해 주세요.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb"></div>
+                        <div class="txt_box">
+                            <h3 class="tit">서로 다투지 않아요</h3>
+                            <p>종교, 정치 등의 논란을 야기시킬 수 있는 말이나 상대방을 공격하는 내용은 삼가해 주세요.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn_area ty_bot taC">
+                    <button class="btn_mid" onclick="close_pop(this)">다시 보지 않기</button>
+                    <button class="btn_mid white" onclick="close_pop(this)">확인</button>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" class="footer">
+            <ul class="footer_menu">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">광고안내</a></li>
+                <li><a href="">개인정보취급방침</a></li>
+            </ul>
+            <div class="footer_policy">
+                <h2 class="footer_policy_tit">
+                    <button type="button" class="btn_policy">㈜동아사이언스 키즈 플랫폼 <i></i></button>
+                </h2>
+                <div class="txt_box">
+                    개인정보관리책임자 : <span>김수희 (privacy@dongascience.com) |</span> <span>청소년보호책임자 : 조기견</span> <br><br>
+                    서울시 용산구 청파로 109, 7층 (04370) | 문의 : 02-6749-2000 ｜팩스 : 02-3148-0789  사업자등록번호 : 101-81-62201 (사업자정보확인) | 통신판매업신고번호 : 제2013-서울용산-01101호 | 온라인 결제를 위한 PG사의 구매안전서비스(가입사실 확인)
+                </div>
+            </div>
+            <p class="copy">Copyright © Dongascience. All right reserved.</p>
+        </footer>
+
+    </div>
+    <script>
+        //레이어 팝업 닫기
+        function close_pop(e){
+            var $this = $(e);
+            $this.parents('.layer_popup').removeClass('on');
+        }
+    </script>
+</body>
+</html>

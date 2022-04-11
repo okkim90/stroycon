@@ -64,7 +64,7 @@ select::-ms-expand {
 }
 
 input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="email"],input[type="button"],input[type="submit"],textarea {
-    -webkit-appearance: none;-moz-appearance: none; color: #777777;
+    -webkit-appearance: none;-moz-appearance: none; color: #424242;
 	border-radius: 0 !important;
 }
 
