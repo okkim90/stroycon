@@ -54,3 +54,29 @@ function filebox(target){
         $('#btn_upload_cha').data('chaImg',$val);
     }
 }
+
+function li_edit(target){
+    var $this = $(target);
+    var $li_edit_box = $this.parents('.li_edit_box');
+
+    if($li_edit_box.hasClass('on')){
+        $li_edit_box.removeClass('on');
+    }else{
+        $('.li_edit_box').removeClass('on');
+        $li_edit_box.addClass('on');
+    }
+
+    $(document).click(function(e) {
+        if (!$(e.target).is('.li_edit_box, .li_edit_box *')) {
+            $('.li_edit_box').removeClass('on');
+        }
+    });
+}
+
+function close_li_edit(target){
+
+    var $this = $(target);
+    var $li_edit_box = $this.parents('.li_edit_box');
+    $li_edit_box.removeClass('on');
+
+}
