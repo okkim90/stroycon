@@ -333,6 +333,9 @@ body.bg_w {
         &.ty_bot {
             margin-top: 30px;
         }
+        &.ty_bot2 {
+            margin-top: 20px;
+        }
         &.taC {
             text-align: center;
         }
@@ -475,6 +478,52 @@ body.bg_w {
             line-height: 34px;
             background: url(../images/ico/ico_pen.svg) no-repeat 0 center;
 
+        }
+    }
+    &_plus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin: 0 !important;
+        height: 36px;
+        line-height: 36px;
+        background-color: #5e25c7;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold;
+        i {
+            display: inline-block;
+            margin-right: 4px;
+            vertical-align: top;
+            width: 12px;
+            height: 12px;
+            position: relative;
+
+            &::before {
+                content:'';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                margin-left: -1px;
+                width: 2px;
+                height: 100%;
+                background-color: #fff;
+                border-radius: 2px;
+            }
+            &::after {
+                content:'';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -1px;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                border-radius: 2px;
+            }
         }
     }
 }
