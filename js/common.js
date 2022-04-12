@@ -127,11 +127,15 @@ function li_edit(target){
 }
 
 function close_li_edit(target){
-
     var $this = $(target);
     var $li_edit_box = $this.parents('.li_edit_box');
     $li_edit_box.removeClass('on');
+}
 
+function close_setting_set(target){
+    var $this = $(target);
+    var $setting_set = $this.parents('.setting_box');
+    $setting_set.removeClass('on');
 }
 
 function edit_name(target){
