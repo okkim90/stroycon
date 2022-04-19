@@ -14,17 +14,7 @@ body.bg_w { background-color: transparent; }
 
 .fc_lgrey { color: #999; }
 
-.header { background-color: #fff; padding-bottom: 10px; position: absolute; z-index: 9999; width: 100%; min-width: 1240px; left: 0; top: 0; }
-
-.main .header { background-color: transparent; }
-
-.main .header .header_top .logo { background-image: url(../images/LOGO_W.png); }
-
-.main .header .nav_area .nav_list li a { color: #fff; }
-
-.main .header .header_util .btn_mypage { background-image: url(/images/ico/ico_mem.svg); }
-
-.main .header .header_util .btn_lm .bar_box .bar { background-color: #fff; }
+.header { background-color: #fff; padding-bottom: 10px; position: absolute; z-index: 9999; width: 100%; min-width: 1240px; left: 0; top: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.07); /* @at-root .main & { background-color: transparent; .header_top { .logo { background-image: url(../images/LOGO_W.png); } } .nav_area { .nav_list li a { color: #fff; } } .header_util { .btn_mypage { background-image: url(/images/ico/ico_mem.svg); } .btn_lm { .bar_box .bar { background-color: #fff; } } } } */ }
 
 .sub .header { min-width: auto; }
 
@@ -661,9 +651,10 @@ body.bg_w { background-color: transparent; }
   .inner { padding: 0 30px; } }
 
 @media (max-width: 767px) { #container.sub { padding-top: 90px; padding-bottom: 50px; }
+  #container.sub.has_mv { padding-top: 0; }
   #container.sub.no_mv { padding-top: 90px; }
   .inner { padding: 0 20px; }
-  .header { min-width: auto; position: fixed; padding-bottom: 0; }
+  .header { min-width: auto; position: fixed; padding-bottom: 0; /* @at-root .main &.bgon { background-color: #fff; .header_top { .logo { background-image: url(../images/LOGO.png); } } .nav_area { .nav_list li a { color: #212121; } } .header_util { .btn_mypage { background-image: url(/images/ico/ico_mem_b.svg); } .btn_lm { .bar_box .bar { background-color: #212121; } } } } */ }
   .header_top { padding: 0 20px; }
   .header_top_inner { height: 50px; }
   .header_top_inner .logo { height: 30px; width: 60px; background-size: contain; }
@@ -678,11 +669,6 @@ body.bg_w { background-color: transparent; }
   .header .nav_area .nav_list li a { font-size: 14px; line-height: 40px; }
   .header .nav_area .nav_list li a span { padding: 0 5px; }
   .header .nav_area .nav_list li.on a { font-size: 18px; }
-  .main .header.bgon { background-color: #fff; }
-  .main .header.bgon .header_top .logo { background-image: url(../images/LOGO.png); }
-  .main .header.bgon .nav_area .nav_list li a { color: #212121; }
-  .main .header.bgon .header_util .btn_mypage { background-image: url(/images/ico/ico_mem_b.svg); }
-  .main .header.bgon .header_util .btn_lm .bar_box .bar { background-color: #212121; }
   .top_cate { padding: 9px 10px; margin-bottom: 20px; }
   .top_cate_item + .top_cate_item { margin-left: 10px; }
   .top_cate_link { height: 30px; line-height: 28px; font-size: 12px; }

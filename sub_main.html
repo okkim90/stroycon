@@ -45,26 +45,23 @@
                 </nav>
             </div>
         </header>
-        <div id="container" class="sub">
+        <div id="container" class="sub has_mv">
             <section class="mv_wrap">
                 <div class="mv">
                     <div class="swiper-wrapper mv_list">
                         <div class="swiper-slide mv_item mv_item1">
-                            <a href="" class="mv_item_link" style="background-image: url(./images/main/mv1_bg.png);">
-                                <img src="./images/main/mv1.png" alt="" class="only_pc">
-                                <img src="./images/main/mv1_m.png" alt="" class="only_m">
+                            <a href="" class="mv_item_link">
+                                <img src="./images/main/mv01.png" alt="" class="">
                             </a>
                         </div>
                         <div class="swiper-slide mv_item mv_item2">
-                            <a href="" class="mv_item_link" style="background-image: url(./images/main/mv1_bg.png);">
-                                <img src="./images/main/mv1.png" alt="" class="only_pc">
-                                <img src="./images/main/mv1_m.png" alt="" class="only_m">
+                            <a href="" class="mv_item_link">
+                                <img src="./images/main/mv01.png" alt="" class="">
                             </a>
                         </div>
                         <div class="swiper-slide mv_item mv_item3">
-                            <a href="" class="mv_item_link" style="background-image: url(./images/main/mv1_bg.png);">
-                                <img src="./images/main/mv1.png" alt="" class="only_pc">
-                                <img src="./images/main/mv1_m.png" alt="" class="only_m">
+                            <a href="" class="mv_item_link">
+                                <img src="./images/main/mv01.png" alt="" class="">
                             </a>
                         </div>
                     </div>
@@ -834,6 +831,7 @@
     <script>
         var mv = new Swiper('.mv',{
             speed:600,
+            slidesPerView:3,
             loop:true,
             autoplay: {
                 delay: 4500,
@@ -842,7 +840,13 @@
             pagination: {
                 clickable:true,
                 el: '.mv_pagination'
+            },
+            breakpoints: {
+                1023: {
+                    slidesPerView:1
+                }
             }
+
         });
         $(window).on('load resize scroll',function(){
             if($(this).scrollTop() > 0){
