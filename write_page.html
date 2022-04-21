@@ -31,7 +31,7 @@
                         <button type="button" class="btn_small white">임시저장</button>
                         <button type="button" class="btn_small white">미리보기</button>
                     </div>
-                    <button type="button" class="btn_save white"><span class="blind">이전</span></button>
+                    <button type="button" class="btn_save white" onclick="save()"><span class="blind">저장</span></button>
                 </div>
                 <div class="nov_write_wrap">
                     <div id="nov_write" class="nov_write">
@@ -534,11 +534,13 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
+    <div id="saved">
 
+    </div>
 
     <script>
         var $pos = $('#write_pos');
@@ -604,7 +606,7 @@
                                         '</span>'
                                     )
                                 }
-                                
+
                             }else{
                                 if($(this).data("thumb")){
                                     $pos.before(
@@ -647,10 +649,10 @@
                                         '</span>'
                                     )
                                 }
-                                
+
                             }
                         }
-                    });   
+                    });
                 }
 
 
@@ -736,7 +738,7 @@
 
 
 
-        
+
         function select_type(e){
             var $target = $(e);
             var $cha_box = $target.parents('.cha_box');
@@ -768,8 +770,8 @@
                 )
             }
             $('.popup_cha_select').data('edit',$origin_id);
-            
-            
+
+
             $('.popup_cha_select').find('.img_box').html('<img src="'+$origin_thumb+'" alt="">');
             $('.popup_cha_select').find('.cha_name').val($origin_name)
 
@@ -809,9 +811,9 @@
             }else{
                 return false;
             }
-           
 
-            
+
+
         }
 
 
@@ -911,7 +913,7 @@
 
         //케릭터 추가 불러오기
         function call_cha_add(){
-            
+
             $('.popup_cha_select').addClass('on');
         }
 
@@ -1000,7 +1002,7 @@
                         close_cha_add();
                         console.log('imgX');
                     }
-                    
+
                     $('.cha_list').scrollLeft($('.cha_list')[0].scrollWidth);
                 }
             }else{
@@ -1024,6 +1026,14 @@
         //          }
         //      }
         //  });
+
+        function save(){
+            const $html = $('#nov_write').clone();
+            $html.find('.btn_box').remove();
+            $html.find('#write_pos').remove();
+            $html.find('.cont_area').removeAttr('onclick');
+            console.log($html.html());
+        }
 
     </script>
 

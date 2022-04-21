@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>스토리콘</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/nov_view.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+<body>
+    <div id="wrap" class="sub disable-dbl-tap-zoom noSelect">
+        <div id="container">
+            <div class="sub_inner">
+                <div class="sub_header ty_view">
+                    <h1 class="blind">용이 비를 내리는 나라 이십바이트임당</h1>
+                    <div class="tit_area">
+                        <h2 class="tit">12화. The Contract</h2>
+                        <span class="count_box">(<span class="current_box">0</span>/<span class="total_box"></span>)</span>
+                    </div>
+                    <a href="" class="btn_back"><span class="blind">이전</span></a>
+                    <div class="setting_set">
+                        <button type="button" class="btn_setting"><span class="blind">설정</span></button>
+                        <div class="setting_box">
+                            <ul class="setting_list">
+                                <li><a href="">수정하기</a></li>
+                                <li><a href="">삭제하기</a></li>
+                                <li><a href="">취소</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="nov_view" class="nov_view" data-long-press-delay="800">
+                    <div class="view_dim"></div>
+
+                    <!--
+                    <div class="chapter_box on">
+                        <span class="step nov_tit on">1화</span>
+                    </div>
+                    -->
+                    <div class="chapter_box on" style="background-image: url(./images/bg_sample.png);">
+                        <!-- DEV : 배경이미지 변경시 깜빡임 방지하기 위해서 이미지 미리 로드시키기 위함 -->
+                        <img src="./images/bg_sample.png" alt="" style="display: none;">
+                        <img src="./images/view_bg1.jpg" alt="" style="display: none;">
+                        <img src="./images/view_bg2.gif" alt="" style="display: none;">
+                        <img src="./images/view_bg3.jpg" alt="" style="display: none;">
+                        <div class="chapter_box_inner">
+
+                            <span class="view_sec step ty_talk main" data-id="p1"><div class="script_box right"><span class="thumb"><img src="./images/cha/cha1.png" alt=""></span><div class="txt_box"><span class="name">주인공</span><div class="script_list"><span class="script"><span class="cont_area">asdfasdf</span></span></div></div></div></span><span class="view_sec step ty_talk main subordination" data-id="p1"><div class="script_box right"><span class="thumb"><img src="./images/cha/cha1.png" alt=""></span><div class="txt_box"><span class="name">주인공</span><div class="script_list"><span class="script"><span class="cont_area">asdf</span></span></div></div></div></span><span class="view_sec step ty_talk main subordination" data-id="p1"><div class="script_box right"><span class="thumb"><img src="./images/cha/cha1.png" alt=""></span><div class="txt_box"><span class="name">주인공</span><div class="script_list"><span class="script"><span class="cont_area">asdf</span></span></div></div></div></span><span class="view_sec step ty_talk main subordination" data-id="p1"><div class="script_box right"><span class="thumb"><img src="./images/cha/cha1.png" alt=""></span><div class="txt_box"><span class="name">주인공</span><div class="script_list"><span class="script"><span class="cont_area">asdf</span></span></div></div></div></span><span class="view_sec step ty_talk main subordination" data-id="p1"><div class="script_box right"><span class="thumb"><img src="./images/cha/cha1.png" alt=""></span><div class="txt_box"><span class="name">주인공</span><div class="script_list"><span class="script"><span class="cont_area">asdf</span></span></div></div></div></span><span class="view_sec step ty_talk main subordination" data-id="p1"><div class="script_box right"><span class="thumb"><img src="./images/cha/cha1.png" alt=""></span><div class="txt_box"><span class="name">주인공</span><div class="script_list"><span class="script"><span class="cont_area">asdf</span></span></div></div></div></span><span class="view_sec step ty_talk main subordination" data-id="p1"><div class="script_box right"><span class="thumb"><img src="./images/cha/cha1.png" alt=""></span><div class="txt_box"><span class="name">주인공</span><div class="script_list"><span class="script"><span class="cont_area">asdf</span></span></div></div></div></span>
+                            <span class="view_sec step ty_end_btns">
+                                <button type="button" class="btn">다음회차 보기</button>
+                                <button type="button" class="btn">리스트 보기</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="view_bottom">
+                    <div class="progress_box">
+                        <div id="progress"></div>
+                    </div>
+                    <div class="view_ctrl">
+                        <div class="ctrl_txt">
+                            <strong class="ctrl_txt_tit">글자크기</strong>
+                            <div class="btns" data-text='{"size":12, "max":18, "min":10}' data-name='{"size":13, "max":19, "min":11}' >
+
+                                <button class="btn_sizing btn_down" onclick="textDown();"><span class="blind">글자 사이즈 down</span></button>
+                                <button class="btn_sizing btn_up" onclick="textUp();"><span class="blind">글자 사이즈 up</span></button>
+                                <script>
+                                    let btn_sizing = $('.ctrl_txt .btns');
+                                    let text_size = btn_sizing.data('text');
+                                    let name_size = btn_sizing.data('name');
+                                    function textUp(){
+                                        if(text_size.size < text_size.max){
+                                            text_size.size+=1;
+                                            $('.cont_area').css({'font-size':text_size.size });
+                                        }
+                                        if(name_size.size < name_size.max){
+                                            name_size.size+=1;
+                                            $('.script_box .name').css({'font-size':name_size.size });
+                                        }
+                                    }
+                                    function textDown(){
+                                        if(text_size.size > text_size.min){
+                                            text_size.size-=1;
+                                            $('.cont_area').css({'font-size':text_size.size });
+                                        }
+                                        if(name_size.size > name_size.min){
+                                            name_size.size-=1;
+                                            $('.script_box .name').css({'font-size':name_size.size });
+                                        }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        <div class="ctrl_speed">
+                            <label><input type="radio" name="speed" value="1" class="speed_chk" checked><span class="blind">1배속</span><span class="ctrl_speed_btn">X 1</span></label>
+                            <label><input type="radio" name="speed" value="1.5" class="speed_chk"><span class="blind">1.5배속</span><span class="ctrl_speed_btn">X 1.5</span></label>
+                            <label><input type="radio" name="speed" value="2" class="speed_chk"><span class="blind">2배속</span><span class="ctrl_speed_btn">X 2</span></label>
+                            <!--
+                            <button type="button" class="ctrl_speed_btn"><span class="blind">1배속</span>X 1</button>
+                            <button type="button" class="ctrl_speed_btn"><span class="blind">1.5배속</span>X 1.5</button>
+                            <button type="button" class="ctrl_speed_btn"><span class="blind">2배속</span>X 2</button>
+                            -->
+                        </div>
+                        <div class="ctrl_btns clearfix">
+                            <a href="view_comments.html" class="btn_comment"><span class="blind">댓글 보기</span></a>
+                            <a href="" class="btn_epi btn_prev"><span class="blind">이전 화 보기</span></a>
+                            <a href="" class="btn_epi btn_next"><span class="blind">다음 화 보기</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/long-press-event.min.js"></script>
+    <script>
+        $(function(){
+            $('.nov_view').on('click',function(){
+
+                if(intervId){
+                    stop_autoplay();
+                }else{
+                    step_next();
+                }
+
+            });
+        });
+
+
+        $(document).keydown(function(event) {
+            if (event.keyCode == '37') {
+                step_prev();
+            }
+            else if (event.keyCode == '39') {
+                step_next();
+            }
+        });
+
+
+        var el = document.getElementById('nov_view');
+
+            // listen for the long-press event
+            el.addEventListener('long-press', function(e) {
+
+            // stop the event from bubbling up
+
+            var $speed_ty;
+            if($('.speed_chk').is(':checked')){
+                var $speed_ty = $('.speed_chk:checked').val();
+                console.log($speed_ty);
+            }
+
+            autoplay($speed_ty);
+            //  $('.touch_layer').focus();
+            //  $('.view_ctrl').trigger('click');
+            e.preventDefault();
+
+
+        });
+
+        // window.oncontextmenu = function(event) {
+        //      event.preventDefault();
+        //     event.stopPropagation();
+        //      return false;
+        //  };
+        window.addEventListener("contextmenu", function(e) { e.preventDefault(); })
+
+        $('.speed_chk').on('change',function(){
+            //console.log('스피드 변경'+$(this).val());
+            if($('.speed_chk').is(':checked') && intervId){
+                stop_autoplay();
+                autoplay($(this).val());
+            }
+
+        });
+
+
+        function step_view(pos){
+            for(var i = 0; i <= pos; i++ ){
+                var $item =  $('.step').eq(i);
+                $item
+                .addClass('on')
+                .parents('.chapter_box')
+                .addClass('on')
+                .siblings()
+                .removeClass('on');
+                // if($('.step').eq($step).hasClass('ty_bg')){
+                //     var bg = $('.step').eq($step).data('img');
+                //     var fc = $('.step').eq($step).data('fc');
+                //     console.log(bg);
+                //     $('.step').eq($step).parents('.chapter_box').css({'background-image':'url('+ bg +')', 'color':fc});
+                // }
+                if($item.parents('.bg_area')){
+                    var $bgarea = $('.step').eq(i-1).parents('.bg_area');
+                    if($item.parents('.bg_area').data('img')){
+                        var bg = $bgarea.data('img');
+                        var fc = $bgarea.data('fc');
+                        $('.step').eq(i).parents('.chapter_box').css({'background-image':'url('+ bg +')', 'background-color':'transparent', 'color':fc});
+                    }
+
+                    if($item.parents('.bg_area').data('bc')){
+                        var bc = $bgarea.data('bc');
+                        var fc = $bgarea.data('fc');
+                        $('.step').eq(i).parents('.chapter_box').css({'background-color':bc,'background-image':'url("images/empty.png")', 'color':fc});
+                    }
+                }
+                $('.current_box').text(i);
+            }
+            for(var i = pos ; i <= $('.step').length; i++ ){
+                $('.step').eq(i).removeClass('on');
+            }
+            $('.chapter_box.on').scrollTop($('.chapter_box.on')[0].scrollHeight);
+        }
+
+
+        $('#progress').slider({
+            range : "min",
+            value: 0,
+            min: 0,
+            max: $('.step').length ,
+            slide: function( event, ui ) {
+                //console.log(ui.value);
+                console.log(ui.value);
+                step_view(ui.value);
+                console.log()
+            },
+        });
+
+        $('.total_box').text($('.step').length);
+        function step_prev(){
+            var current_val = $('#progress').slider('value');
+            if(current_val > 0){
+                $('#progress').slider('value',current_val-1);
+                step_view(current_val-1);
+                console.log(current_val-1);
+            }
+        }
+        function step_next(){
+            var current_val = $('#progress').slider('value');
+            if(current_val < $('.step').length){
+                $('#progress').slider('value',current_val + 1);
+                step_view(current_val+1);
+                console.log(current_val);
+
+            }else{
+                stop_autoplay();
+            }
+        }
+
+        let intervId;
+        let default_speed = 600;
+
+        function autoplay(speed){
+            if (!intervId) {
+                intervId = setInterval(step_next,default_speed*speed);
+                console.log('auto start');
+            }
+        }
+        console.log($('.step').length);
+        function stop_autoplay(){
+            clearInterval(intervId);
+            intervId = null;
+            console.log('auto finish')
+
+        }
+
+        document.ontouchmove = function(event){
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

@@ -285,6 +285,7 @@ body {
     height: 100%;
     left: 50%;
     top: 0;
+    z-index: 10;
     max-width: 740px;
     transform: translateX(-50%);
     visibility: hidden;
@@ -359,6 +360,9 @@ body {
                     display: none;
                 }
             }
+            & + .ty_talk:not(.subordination) {
+                margin-top: 10px;
+            }
         }
         .cont_area {
             background-color: #fff;
@@ -402,6 +406,8 @@ body {
                 }
             }
         }
+
+
     }
 
     &.ty_end_btns {
@@ -425,6 +431,17 @@ body {
             }
         }
     }
+}
+.bg_layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 .view_dim {
@@ -498,8 +515,14 @@ body {
             font-size: 13px;
             margin-bottom: 4px;
             line-height: 1.2em;
+            color: #fff;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
             @at-root #{$this}.right .name {
                 text-align: right;
+            }
+            @at-root .nov_write .script_box .txt_box .name {
+                color: #333;
+                text-shadow: none;
             }
         }
         .script {
