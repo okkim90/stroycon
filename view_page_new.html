@@ -47,7 +47,7 @@
                     <img src="./images/view_bg2.gif" alt="" style="display: none;">
                     <img src="./images/view_bg3.jpg" alt="" style="display: none;">
                     <div class="view_dim"></div>
-                    <div class="bg_layer" style="background-image: url(./images/bg_sample.png);"></div>
+                    <div class="bg_layer" style=""></div>
                     <!--
                     <div class="chapter_box on">
                         <span class="step nov_tit on">1화</span>
@@ -62,22 +62,22 @@
                                 배경이미지 : data-img="이미지경로"
                             -->
 
-                                <span class="view_sec step txt default" data-img="./images/bg_sample.png">
+                                <span class="view_sec step txt default" >
                                     <span class="default_inner">
                                         <span class="cont_area">테스트 텍스트 테스트 텍스트 테스트 텍스트 </span>
                                     </span>
                                 </span>
-                                <span class="view_sec step txt default" data-img="./images/bg_sample.png">
+                                <span class="view_sec step txt default" >
                                     <span class="default_inner">
                                         <span class="cont_area">테스트 텍스트 테스트 텍스트 </span>
                                     </span>
                                 </span>
-                                <span class="view_sec step txt default" data-img="./images/bg_sample.png">
+                                <span class="view_sec step txt default">
                                     <span class="default_inner">
                                         <span class="cont_area">테스트 텍스트 테스트 </span>
                                     </span>
                                 </span>
-                                <span class="view_sec step ty_talk sub" data-id="p2" data-img="./images/bg_sample.png">
+                                <span class="view_sec step ty_talk sub" data-id="p2">
                                     <div class="script_box left">
                                         <span class="thumb"></span>
                                         <div class="txt_box">
@@ -544,11 +544,15 @@
             });
         }
 
+
+
         function set_pos(step){
             slider(step);
             step_view(step);
         }
-        set_pos(14);
+
+        //시작점 설정
+        set_pos(0);
 
 
         $('.total_box').text($('.step').length);
