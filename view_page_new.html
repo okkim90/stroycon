@@ -352,6 +352,9 @@
                                     </div>
                                 </span>
                             <!--// bg 영역4-->
+                             <!-- 등록시 bg영역 밑에 아무 컨텐츠가 없을 경우 아래와같이 빈 step 적용-->
+
+                             <span class="view_sec step" data-img="./images/view_bg1.jpg"></span>
                             <!-- 다음회차 & 리스트 이동-->
                             <span class="view_sec step ty_end_btns">
                                 <button type="button" class="btn">다음회차 보기</button>
@@ -449,21 +452,16 @@
 
             // listen for the long-press event
             el.addEventListener('long-press', function(e) {
-
             // stop the event from bubbling up
-
             var $speed_ty;
             if($('.speed_chk').is(':checked')){
                 var $speed_ty = $('.speed_chk:checked').val();
                 console.log($speed_ty);
             }
-
             autoplay($speed_ty);
             //  $('.touch_layer').focus();
             //  $('.view_ctrl').trigger('click');
             e.preventDefault();
-
-
         });
 
         // window.oncontextmenu = function(event) {
@@ -481,6 +479,9 @@
             }
 
         });
+
+
+
 
 
         function step_view(pos){
@@ -513,8 +514,8 @@
                 //     }
                 // }
 
-                if($item.data('img')){
-                    var bg = $item.data('img');
+                if($('.step').eq(i-1).data('img')){
+                    let bg = $('.step').eq(i-1).data('img');
                     //console.log(bg);
                     $('.bg_layer').css({'background-image':'url('+ bg +')'});
                 }
@@ -528,18 +529,27 @@
         }
 
 
-        $('#progress').slider({
-            range : "min",
-            value: 0,
-            min: 0,
-            max: $('.step').length ,
-            slide: function( event, ui ) {
-                //console.log(ui.value);
-                console.log(ui.value);
-                step_view(ui.value);
-                console.log()
-            },
-        });
+        function slider(step){
+            $('#progress').slider({
+                range : "min",
+                value: step,
+                min: 0,
+                max: $('.step').length ,
+                slide: function( event, ui ) {
+                    //console.log(ui.value);
+                    console.log(ui.value);
+                    step_view(ui.value);
+                    console.log()
+                },
+            });
+        }
+
+        function set_pos(step){
+            slider(step);
+            step_view(step);
+        }
+        set_pos(14);
+
 
         $('.total_box').text($('.step').length);
         function step_prev(){

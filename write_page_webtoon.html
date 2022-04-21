@@ -31,18 +31,130 @@
                         <button type="button" class="btn_small white">임시저장</button>
                         <button type="button" class="btn_small white">미리보기</button>
                     </div>
-                    <button type="button" class="btn_save white"><span class="blind">이전</span></button>
+                    <button type="button" class="btn_save white" onclick="save()"><span class="blind">저장</span></button>
                 </div>
-                <div class="editor_wrap">
-                    <div class="editor_box">
-                        <!--
-                                DEV 에디터 영역 개발 진행 시 삭제해주세요
-                            -->
-                            <div style="display: flex;align-items: center;justify-content: center; height: 200px;background-color: #eee;">에디터 영역</div>
+                <div class="nov_write_wrap">
+                    <div id="nov_write" class="nov_write">
+                        <div id="write_pos" data-pos=""><span>입력위치</span></div>
+                    </div>
+                    <div class="input_wrap">
+                        <div class="file_box">
+                            <input type="text" value=""  placeholder="이미지를 선택해주세요" class="file_box_txt" readonly>
+                            <input type="file" id="upload_bg" class="input_file" accept="image/jpg, image/png, image/gif, image/jpeg" onchange="filebox(this);">
+                            <label for="upload_bg" class="btn_search"></label>
+                        </div>
+                        <ul class="caution_list ty_bot">
+                            <li>이미지 최대 10MB 까지 첨부</li>
+                            <li>확장자가 jpg, png, gif, jpeg 인 이미지만 업로드 가능합니다.</li>
+                        </ul>
+                        <div class="btn_area ty_bot2 taC">
+                            <button id="btn_upload_bg" class="btn_mid btn_upload" onclick="add_bg(this)">등록</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        var $pos = $('#write_pos');
+        //var $bg_val = $('.file_box_txt');
+        var $bg_file = $('#upload_bg');
+        $(function(){
+            $('.nov_write').on('click',function(e){
+                if(e.target == this){
+                    $pos.insertAfter($('.view_sec:last-child'));
+                }
+
+            });
+        });
+
+        function scroll_reset(){
+            //console.log($('#write_pos').position().top);
+            $('#nov_write').scrollTop(0);
+            $('#nov_write').scrollTop($('#write_pos').position().top - $('#nov_write').outerHeight()/2);
+        }
+
+        function pos_change(e){
+            var $target = $(e);
+            $pos.insertBefore($target.parents('.view_sec'));
+            //$('#nov_write').scrollTop($('#write_pos').position().top);
+        }
+
+
+        //배경 수정 flag
+        var bg_editing = false;
+
+        //배경 추가
+        function add_bg(e){
+            var $this = $(e);
+            var $src = $this.data('bg');
+            console.log($src);
+            if($src){
+                if(bg_editing){
+                    $('.bg_section.editing').find('.bg_data').val($src);
+                    $('.bg_section.editing').find('.img_cont').attr('src',$src);
+                    bg_editing = false;
+                }else{
+                    $pos.before(
+                            '<div class="view_sec bg_section_wrap">'+
+                                '<div class="bg_section" onclick="pos_change(this);">'+
+                                    '<div class="img_box"><img src="'+$src+'" alt="" class="img_cont"></div>'+
+                                    '<input type="hidden" class="bg_data" value="'+$src+'">'+
+                                    '<div class="bg_section_bot">'+
+
+                                        '<button type="button" class="btn_ctrl_bg btn_small grey ty_edit" onclick="event.stopPropagation();window.event.cancelBubble = true; call_bg_select(this);">배경수정</button>'+
+                                        '<button type="button" class="btn_ctrl_bg btn_small grey" onclick="event.stopPropagation();window.event.cancelBubble = true; del_bg(this); ">배경삭제</button>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'
+
+                    );
+                }
+                $('.file_box_txt').val('');
+            }else{
+                alert('선택된 이미지가 없습니다.');
+            }
+            call_bg_select(); //팝업닫기
+            scroll_reset(); // 스크롤 리셋
+        }
+
+
+        function call_bg_select(e){
+            var $this = $(e);
+            $('.bg_section').removeClass('editing');
+            if($this.hasClass('ty_edit')){
+                $this.parents('.bg_section').addClass('editing');
+                $origin_bg = $this.parents('.bg_section.editing').find('.bg_data').val();
+                bg_editing = true;
+                $bg_file.trigger('click');
+                console.log($origin_bg);
+                $('.file_box_txt').val($origin_bg);
+                $('#upload_bg').val($origin_bg);
+            }
+        }
+
+
+
+
+
+
+
+
+        //배경 삭제
+        function del_bg(e){
+            var $this = $(e);
+            $this.parents('.bg_section_wrap').remove();
+            chk_script();
+        }
+
+
+
+
+
+
+
+
+    </script>
+
 </body>
 </html>
