@@ -210,8 +210,6 @@ body { overscroll-behavior-y: contain; }
 
 .nov_write .bg_section { background-color: #fff; padding: 8px 18px; border-radius: 6px; margin: 15px 0; }
 
-.nov_write .bg_section.editing { background-color: rgba(255, 0, 0, 0.3); }
-
 .nov_write .bg_section .p_url { display: none; text-align: center; font-size: 12px; line-height: 16px; margin-bottom: 10px; }
 
 .nov_write .bg_section_bot { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
@@ -220,7 +218,9 @@ body { overscroll-behavior-y: contain; }
 
 .nov_write .bg_section_bot .btn_ctrl_bg + .btn_ctrl_bg { margin-left: 5px; }
 
-.nov_write .bg_section .img_box { margin-bottom: 10px; }
+.nov_write .bg_section .img_box { margin-bottom: 10px; text-align: center; }
+
+.nov_write .bg_section .img_box img { max-width: 100%; }
 
 #write_pos { text-align: center; position: relative; margin-left: -20px; margin-right: -20px; overflow: hidden; }
 

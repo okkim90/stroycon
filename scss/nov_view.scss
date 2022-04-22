@@ -670,9 +670,7 @@ body {
         padding: 8px 18px;
         border-radius: 6px;
         margin: 15px 0;
-        &.editing {
-            background-color: rgba(255, 0, 0, 0.3);
-        }
+
         .p_url {
             display: none;
             text-align: center;
@@ -695,6 +693,10 @@ body {
         }
         .img_box {
             margin-bottom: 10px;
+            text-align: center;
+            img {
+                max-width: 100%;
+            }
         }
     }
 
