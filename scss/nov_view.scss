@@ -259,6 +259,9 @@ body {
             width: 40px;
             height: 40px;
             background: url(../images/ico/ico_heart2.svg) no-repeat center center;
+            &.on {
+                background-image: url(../images/ico/ico_heart2_on.svg);
+            }
         }
         .btn_epi {
             float: left;

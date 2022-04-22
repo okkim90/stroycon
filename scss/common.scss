@@ -1576,9 +1576,15 @@ body.bg_w {
             background-position: center center;
             &_like {
                 background-image: url(../images/ico/btn_heart.svg);
+                &.on {
+                    background-image: url(../images/ico/btn_heart_on.svg);
+                }
             }
             &_subscribe {
                 background-image: url(../images/ico/btn_star.svg);
+                &.on {
+                    background-image: url(../images/ico/btn_star_on.svg);
+                }
             }
         }
     }

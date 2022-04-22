@@ -85,6 +85,8 @@ body { overscroll-behavior-y: contain; }
 
 .view_bottom .ctrl_btns .btn_like { float: left; width: 40px; height: 40px; background: url(../images/ico/ico_heart2.svg) no-repeat center center; }
 
+.view_bottom .ctrl_btns .btn_like.on { background-image: url(../images/ico/ico_heart2_on.svg); }
+
 .view_bottom .ctrl_btns .btn_epi { float: left; width: 30px; height: 40px; background-repeat: no-repeat; background-position: center center; }
 
 .view_bottom .ctrl_btns .btn_epi.btn_prev { background-image: url(../images/ico/arrow_l2.svg); }
