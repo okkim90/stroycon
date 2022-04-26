@@ -164,6 +164,10 @@
     & + & {
         border-top: 1px solid #e5e5e5;
     }
+    .txt_area {
+        margin-top: 10px;
+    }
+
 }
 .comment_area_top {
     display: flex;
@@ -326,6 +330,18 @@
         box-sizing: border-box;
         border: 1px solid rgba(0, 0, 0, 0.3);
         border-radius: 12px;
+        background-color: #fff;
+        &.btn_reply {
+            margin-right: 12px;
+        }
+        // &.btn_edit {
+        //     border-color: #5e25c7;
+        //     color: #5e25c7;
+        // }
+        // &.btn_del {
+        //     border-color: #5e25c7;
+        //     color: #5e25c7;
+        // }
     }
 }
 

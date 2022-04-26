@@ -8,7 +8,7 @@
 
 .notice_list_link { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 10px 0; }
 
-.notice_list .tit { display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 14px; line-height: 17px; color: #212121; min-width: 0; }
+.notice_list .tit { display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 14px; line-height: 17px; color: #212121; min-width: 0; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
 .notice_list .tit_txt { display: inline-block; min-width: 0; }
 
