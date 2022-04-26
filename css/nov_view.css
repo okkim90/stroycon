@@ -113,7 +113,7 @@ body { overscroll-behavior-y: contain; }
 
 .step.txt + .step.txt { margin-top: 0; }
 
-.step.ty_talk { margin-top: 30px; }
+.step.ty_talk { margin-top: 15px; }
 
 .step.ty_talk.subordination { margin-top: 0; }
 
@@ -125,7 +125,7 @@ body { overscroll-behavior-y: contain; }
 
 .step.ty_talk.subordination .right .cont_area::before, .step.ty_talk.subordination .left .cont_area::before { display: none; }
 
-.step.ty_talk.subordination + .ty_talk:not(.subordination) { margin-top: 10px; }
+.step.ty_talk + .ty_talk:not(.subordination) { margin-top: 10px; }
 
 .step.ty_talk .cont_area { background-color: #fff; border-radius: 4px; font-size: 12px; line-height: 1.4em; padding: 6px 8px; color: #424242; position: relative; }
 

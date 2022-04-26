@@ -349,7 +349,8 @@ body {
         }
     }
     &.ty_talk {
-        margin-top: 30px;
+        margin-top: 15px;
+
         &.subordination {
             margin-top: 0;
             .script_box {
@@ -367,9 +368,10 @@ body {
                     display: none;
                 }
             }
-            & + .ty_talk:not(.subordination) {
-                margin-top: 10px;
-            }
+
+        }
+        & + .ty_talk:not(.subordination) {
+            margin-top: 10px;
         }
         .cont_area {
             background-color: #fff;
