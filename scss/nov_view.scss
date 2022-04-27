@@ -892,10 +892,22 @@ body {
             height: 34px;
             border: solid 1px #e1e1e1;
             padding: 0 10px;
+            padding-right: 76px;
             border-radius: 3px;
             box-sizing: border-box;
             font-size: 12px;
             letter-spacing: -0.36px;
+            text-overflow: ellipsis;
+        }
+        .byte_out {
+            display: block;
+            position: absolute;
+            font-size: 10px;
+            color: #999;
+            right: 72px;
+            line-height: 35px;
+            margin-top: 0;
+            padding: 0;
         }
         .btn_input {
             width: 40px;
