@@ -90,7 +90,7 @@ body.bg_w { background-color: transparent; }
 
 .footer .footer_policy { -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 500px; margin: 0 auto; background-color: #fff; text-align: left; border: 1px solid rgba(0, 0, 0, 0.1); }
 
-.footer .footer_policy_tit button { display: block; width: 100%; line-height: 30px; padding: 0 12px; position: relative; font-size: 12px; font-weight: bold; text-align: left; }
+.footer .footer_policy_tit button { display: block; width: 100%; line-height: 30px; padding: 0 12px; position: relative; font-size: 12px; font-weight: bold; text-align: center; }
 
 .footer .footer_policy_tit button i { position: absolute; width: 12px; height: 7px; background-image: url(../images/ico/ico_open.svg); background-repeat: no-repeat; background-position: center center; right: 12px; top: 50%; margin-top: -3.5px; }
 
