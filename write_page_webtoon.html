@@ -28,13 +28,20 @@
                         <input type="text" id="write_tit" class="write_tit_input" placeholder="제목을 입력해 주세요.">
                     </div>
                     <div class="btn_set">
-                        <button type="button" class="btn_small white">임시저장</button>
-                        <button type="button" class="btn_small white">미리보기</button>
+                        <button type="button" class="btn_small white">저장</button>
+                        <button type="button" class="btn_small white2">승인요청</button>
                     </div>
-                    <button type="button" class="btn_save white" onclick="save()"><span class="blind">저장</span></button>
                 </div>
                 <div class="nov_write_wrap">
                     <div id="nov_write" class="nov_write">
+                        <div class="write_caution">
+                            <strong class="blind">작품 작성 안내사항</strong>
+                            <button type="button" class="close_caution" onclick="close_caution()"><span class="blind">닫기</span></button>
+                            <ul class="caution_list">
+                                <li>관리자의 승인을 받은 작품만 홈페이지에 업로드 됩니다.</li>
+                                <li>작품을 다 작성하신 후, 우측상단의 "<strong>승인요청</strong>" 버튼을 꼭 선택해주세요.</li>
+                            </ul>
+                        </div>
                         <div id="write_pos" data-pos=""><span>입력위치</span></div>
                     </div>
                     <div class="input_wrap">
@@ -165,6 +172,10 @@
             $('#upload_bg').val(null);
             $('#btn_upload_bg').data('bg','');
             bg_editing = false;
+        }
+
+        function close_caution(){
+            $('.write_caution').remove();
         }
     </script>
 </body>

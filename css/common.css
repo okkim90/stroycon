@@ -123,6 +123,8 @@ body.bg_w { background-color: transparent; }
 
 .btn_small.white { color: #fff; border-color: #fff; }
 
+.btn_small.white2 { color: #424242; border-color: #fff; background-color: #fff; font-weight: 500; }
+
 .btn_small.grey { padding: 0 10px; color: #424242; background-color: #f5f5f5; border-color: rgba(0, 0, 0, 0.07); }
 
 .btn_save { display: inline-block; vertical-align: top; width: 40px; height: 40px; background-repeat: no-repeat; background-position: center center; background-image: url(../images/ico/ico_save.svg); }
@@ -511,7 +513,7 @@ body.bg_w { background-color: transparent; }
 
 .sub_header.ty_view .btn_back { position: absolute; left: 0; top: 0; }
 
-.sub_header.ty_write { position: fixed; max-width: 740px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 40px; height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.5); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.sub_header.ty_write { position: fixed; max-width: 740px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 40px; padding-right: 10px; height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.5); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .sub_header.ty_write .btn_back { position: absolute; left: 0; top: 0; }
 
@@ -533,7 +535,9 @@ body.bg_w { background-color: transparent; }
 
 .sub_header.ty_write .btn_set { -ms-flex-negative: 0; flex-shrink: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-left: 15px; }
 
-.sub_header.ty_write .btn_set .btn_small + .btn_small { margin-left: 5px; }
+.sub_header.ty_write .btn_set .btn_small { padding: 0 8px; }
+
+.sub_header.ty_write .btn_set .btn_small + .btn_small { margin-left: 10px; }
 
 .sub_header.ty_w { position: fixed; max-width: 740px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 40px; height: 40px; text-align: center; background-color: #fff; -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); }
 
@@ -584,6 +588,14 @@ body.bg_w { background-color: transparent; }
 .sc_tag.re span { display: block; -webkit-transform: scale(0.9); transform: scale(0.9); -webkit-transform-origin: center center; transform-origin: center center; }
 
 .sc_tag.ty_txt { border: solid 1px rgba(94, 37, 199, 0.3); border-radius: 3px; height: 16px; line-height: 13px; font-size: 11px; color: #5e25c7; padding: 0 5px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.sc_tag.service { background-color: #50c785; font-size: 10px; line-height: 14px; color: #fff; letter-spacing: -0.1px; border-radius: 3px; padding: 0 3px; }
+
+.sc_tag.hold { border: 1px solid #50c785; font-size: 10px; line-height: 12px; height: 14px; font-weight: 500; -webkit-box-sizing: border-box; box-sizing: border-box; color: #50c785; letter-spacing: -0.1px; border-radius: 3px; padding: 0 3px; }
+
+.sc_tag.false { border: 1px solid #ff8000; font-size: 10px; line-height: 12px; height: 14px; font-weight: 500; -webkit-box-sizing: border-box; box-sizing: border-box; color: #ff8000; letter-spacing: -0.1px; border-radius: 3px; padding: 0 3px; }
+
+.sc_tag.save { border: 1px solid rgba(0, 0, 0, 0.3); font-size: 10px; line-height: 12px; height: 14px; font-weight: 500; -webkit-box-sizing: border-box; box-sizing: border-box; color: #424242; letter-spacing: -0.1px; border-radius: 3px; padding: 0 3px; }
 
 .sc_counter.ty1 { padding: 0 10px 0 5px; position: absolute; left: 0; bottom: 0; margin-left: -4px; background-color: rgba(0, 0, 0, 0.3); border-radius: 0 8px 8px 0; }
 

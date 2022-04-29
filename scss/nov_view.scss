@@ -940,6 +940,39 @@ body {
     text-align: center;
 }
 
+.write_caution {
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    border-radius: 3px;
+    margin: 5px 0 10px;
+    .close_caution {
+        position: absolute;
+        background-color: #fff;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px 12px 0 0;
+        right: 0;
+        top: -12px;
+        background-image: url(../images/ico/ico_close2.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .caution_list {
+        li {
+            font-size: 11px;
+            letter-spacing: -0.55px;
+            color: #666;
+            strong {
+                color: #424242;
+            }
+            & + li {
+                margin-top: 4px;
+            }
+        }
+    }
+}
+
 
 
 .editor_wrap {

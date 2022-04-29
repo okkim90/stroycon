@@ -1,11 +1,20 @@
 .sc_list {
     &_item {
+        display: flex;
+        align-items: center;
+        .li_edit_box {
+            position: relative;
+            flex-shrink: 0;
+        }
+
         & + & {
             margin-top: 20px;
         }
         .btn_view {
             display: flex;
             align-items: center;
+            flex: 1;
+            min-width: 0;
             .thumb_box {
 
                 background-color: rgba(94, 37, 199, 0.07);
@@ -65,6 +74,7 @@
                 flex: 1;
                 min-width: 0;
                 padding-left: 10px;
+
                 .tit {
                     font-size: 13px;
                     line-height: 1.31;
@@ -203,6 +213,14 @@
             flex: 1;
             min-width: 0;
             padding-left: 20px;
+            .tag_box {
+                margin-bottom: 5px;
+                .sc_tag {
+                    & + .sc_tag {
+                        margin-left: 5px;
+                    }
+                }
+            }
             .sc_tit {
                 display: flex;
                 width: 100%;
@@ -232,7 +250,7 @@
             }
             .info_txt {
                 width: 100%;
-                margin-top: 12px;
+                margin-top: 6px;
                 font-size: 13px;
                 line-height: 20px;
                 letter-spacing: -0.13px;
@@ -240,7 +258,7 @@
                 height: 40px;
             }
             .sc_counter {
-                margin-top: 2px;
+                margin-top: 4px;
             }
         }
         .sc_counter.ty1 {
@@ -414,6 +432,11 @@
             margin-top: 10px;
             font-size: 12px;
             padding: 12px 10px;margin-bottom: 15px;
+        }
+        .txt_box {
+            .tag_box {
+                margin-bottom: 2px;
+            }
         }
 
         &.ty_responsive {
@@ -741,6 +764,13 @@
         margin-left: 0;
         padding-left: 1px;
     }
+    .tag_box {
+        .sc_tag {
+            & + .sc_tag {
+                margin-left: 5px;
+            }
+        }
+    }
     .sc_tit {
         display: flex;
         align-items: center;
@@ -1063,6 +1093,7 @@
                 width: 80px;
             }
         }
+
         &.ty_masonry {
             margin-top: -22px;
             .sc_gal_item {
@@ -1072,6 +1103,11 @@
         }
         .li_edit_box {
             right: 5px;
+        }
+        .txt_area {
+            .tag_box {
+                margin-bottom: 2px;
+            }
         }
     }
 
