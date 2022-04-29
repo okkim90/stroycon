@@ -74,7 +74,9 @@
                 flex: 1;
                 min-width: 0;
                 padding-left: 10px;
-
+                .tag_box {
+                    margin-bottom: 2px;
+                }
                 .tit {
                     font-size: 13px;
                     line-height: 1.31;

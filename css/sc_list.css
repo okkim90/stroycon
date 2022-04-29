@@ -28,6 +28,8 @@
 
 .sc_list_item .btn_view .txt_box { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; min-width: 0; padding-left: 10px; }
 
+.sc_list_item .btn_view .txt_box .tag_box { margin-bottom: 2px; }
+
 .sc_list_item .btn_view .txt_box .tit { font-size: 13px; line-height: 1.31; letter-spacing: -0.13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .sc_list_item .btn_view .txt_box .info_box { margin-top: 8px; font-size: 0; }
