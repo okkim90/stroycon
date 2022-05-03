@@ -167,7 +167,7 @@ body { background-color: #fbfbfb; }
   .main_popular .scList { margin: 0 -5px; margin-top: -25px; padding-bottom: 0; }
   .main_popular .scList_item { padding: 0 5px; margin-top: 25px; }
   .mv { margin: 0; padding: 0 5vw; overflow: visible; }
-  .mv_wrap { padding-top: 110px; }
+  .mv_wrap { padding-top: 120px; }
   .mv_item { padding: 0 5px; }
   .mv_item_link { border-radius: 20px; }
   .mv .mv_pagination { margin-top: 16px; }

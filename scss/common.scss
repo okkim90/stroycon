@@ -71,10 +71,9 @@ body.bg_w {
     &_top {
         padding: 0 40px;
         .logo {
-
             width: 120px;
             height: 79px;
-            background-image: url(../images/LOGO.png);
+            background-image: url(../images/logo.png);
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
@@ -2220,13 +2219,13 @@ body.bg_w {
 @media (max-width:767px) {
     #container {
         &.sub {
-            padding-top: 90px;
+            padding-top: 100px;
             padding-bottom: 50px;
             &.has_mv {
                 padding-top: 0;
             }
             &.no_mv {
-                padding-top: 90px;
+                padding-top: 100px;
             }
         }
     }
@@ -2238,13 +2237,15 @@ body.bg_w {
         min-width: auto;
         position: fixed;
         padding-bottom: 0;
+        border-bottom: none;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
         &_top {
             padding: 0 20px;
         }
         &_top_inner {
-            height: 50px;
+            height: 60px;
             .logo {
-                height: 34px;
+                height: 45px;
                 width: 60px;
                 background-size: contain;
             }
@@ -2285,7 +2286,7 @@ body.bg_w {
                         margin-left: 20px;
                     }
                     a {
-                        font-size: 14px;
+                        font-size: 16px;
                         line-height: 40px;
                         span {
                             padding: 0 5px;
