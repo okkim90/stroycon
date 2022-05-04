@@ -181,6 +181,7 @@ body { background-color: #fbfbfb; }
   .main_popular_tabs li .btn_tab.on { font-size: 19px; }
   .main_popular_tabs li + li { margin-left: 8px; }
   .main_popular_list .sc_tit { font-size: 13px; line-height: 16px; }
+  .main_sec_wrap { margin-top: 20px; }
   .main_recommend { width: auto; margin-right: -20px; }
   .main_recommend_inner { padding-right: 0; -webkit-box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2); box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2); }
   .main_recommend_tit { width: auto; margin-left: 40px; margin-right: 0; border-radius: 12px 0 0 0; }
@@ -194,7 +195,7 @@ body { background-color: #fbfbfb; }
   .main_best_tit { padding-right: 20px; margin-bottom: 14px; }
   .main_best_tit h2 { font-size: 17px; line-height: 36px; }
   .main_best_tit .sort_btns .sort_btn { font-size: 12px; height: 36px; padding: 0 10px; }
-  .sub_sec_wrap { margin-top: 30px; }
+  .sub_sec_wrap { margin-top: 20px; }
   .sub_sec_wrap + .sub_sec_wrap { margin-top: 34px; }
   .sub_sec_wrap_inner { padding: 0; -webkit-box-shadow: none; box-shadow: none; }
   .sub_sec_wrap_inner.ty2 { padding: 0; }
