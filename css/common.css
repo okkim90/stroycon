@@ -46,7 +46,7 @@ body.bg_w { background-color: transparent; }
 
 .header_util .btn_sign.ty_login { margin-left: 0; }
 
-.header_util .btn_sign_ico { width: 26px; height: 26px; background-repeat: no-repeat; background-position: center center; background-size: 25px auto; }
+.header_util .btn_sign_ico { width: 26px; height: 26px; background-repeat: no-repeat; background-position: center center; background-size: 24px auto; }
 
 .ty_logout .btn_sign_ico { background-image: url(../images/ico/ico_sign.svg); }
 
