@@ -235,24 +235,45 @@
                 }
                 &.lv1 {
                     background-color: #e74c3c;
+                    .level_arrow {
+                        border-top-color: #e74c3c;
+                    }
                 }
                 &.lv2 {
                     background-color: #e97820;
+                    .level_arrow {
+                        border-top-color: #e97820;
+                    }
                 }
                 &.lv3 {
                     background-color: #ecb000;
+                    .level_arrow {
+                        border-top-color: #ecb000;
+                    }
                 }
                 &.lv4 {
                     background-color: #b6ce00;
+                    .level_arrow {
+                        border-top-color: #b6ce00;
+                    }
                 }
                 &.lv5 {
                     background-color: #55aad8;
+                    .level_arrow {
+                        border-top-color: #55aad8;
+                    }
                 }
                 &.lv6 {
                     background-color: #3070ae;
+                    .level_arrow {
+                        border-top-color: #3070ae;
+                    }
                 }
                 &.lv7 {
                     background-color: #8650c7;
+                    .level_arrow {
+                        border-top-color: #8650c7;
+                    }
                 }
             }
         }
@@ -377,3 +398,4 @@
         }
     }
 }
+

@@ -818,7 +818,8 @@
     }
 
     &.ty_best {
-        .sc_gal_item + .sc_gal_item {
+        margin-left: -36px;
+        .sc_gal_item {
             margin-left: 36px;
         }
         white-space: nowrap;
@@ -927,7 +928,8 @@
     }
     .sc_gal {
         &.ty_best {
-            .sc_gal_item + .sc_gal_item {
+            margin-left: -20px;
+            .sc_gal_item {
                 margin-left: 20px;
             }
             white-space: nowrap;
@@ -1089,8 +1091,9 @@
             }
         }
         &.ty_best {
+            margin-left: -10px;
             padding-right: 20px;
-            .sc_gal_item + .sc_gal_item {
+            .sc_gal_item {
                 margin-left: 10px;
             }
             .sc_gal_item_link {
