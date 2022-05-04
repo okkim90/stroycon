@@ -150,6 +150,8 @@
 
 .scList_wrap { padding: 40px 20px 40px; }
 
+.scList_wrap.scroll_x { padding: 0; }
+
 @media (max-width: 1023px) { .scList.ty_responsive .scList_item { width: calc(100%/2); }
   .scList.ty_responsive.ty_sub .scList_item { width: calc(100%/2); }
   .scList.ty_best .scList_item { width: calc(100%/2); }
