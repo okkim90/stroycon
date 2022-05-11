@@ -282,12 +282,13 @@
         }
     }
     .sc_list_wrap {
-        padding: 10px 20px 29px;
+        padding: 0 20px 29px;
         &.ty_nopd {
             padding: 0;
         }
-        .sc_list_item + .sc_list_item {
-            margin-top: 10px;
+        .sc_list_item {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
         }
     }
 }

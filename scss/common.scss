@@ -71,9 +71,9 @@ body.bg_w {
     &_top {
         padding: 0 40px;
         .logo {
-            width: 120px;
-            height: 79px;
-            background-image: url(../images/logo.png);
+            width: 180px;
+            height: 90px;
+            background-image: url(../images/logo.svg);
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
@@ -1856,6 +1856,22 @@ body.bg_w {
         border-radius: 3px;
         align-items: baseline;
     }
+    &.new {
+        display: inline-block;
+        background-color: #00bee5;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 0 5px;
+        color: #fff;
+        border-radius: 14px;
+        display: inline-block;
+        vertical-align: top;
+        span {
+            display: block;
+            transform: scale(0.8);
+            transform-origin: center center;
+        }
+    }
     &.up {
         width: 20px;
         height: 14px;
@@ -2286,8 +2302,8 @@ body.bg_w {
         &_top_inner {
             height: 60px;
             .logo {
-                height: 45px;
-                width: 60px;
+                height: 60px;
+                width: 120px;
                 background-size: contain;
             }
         }

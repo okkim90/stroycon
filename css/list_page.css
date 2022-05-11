@@ -90,8 +90,8 @@
 
 .list_area_top.ty2 .sort .btn_sort { border-bottom: 1px solid #f5f5f5; }
 
-.list_area .sc_list_wrap { padding: 10px 20px 29px; }
+.list_area .sc_list_wrap { padding: 0 20px 29px; }
 
 .list_area .sc_list_wrap.ty_nopd { padding: 0; }
 
-.list_area .sc_list_wrap .sc_list_item + .sc_list_item { margin-top: 10px; }
+.list_area .sc_list_wrap .sc_list_item { padding: 20px 0; border-bottom: 1px solid #eee; }
